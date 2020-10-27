@@ -2,7 +2,6 @@
 layout: post
 title: '컴퓨터개론 1장 1절: ICT와 4차 산업혁명'
 tags: [frontpage, jekyll, blog]
-image: ''
 ---
 
 # 컴퓨터개론 1장 1절: ICT와 4차 산업혁명
@@ -50,4 +49,3 @@ image: ''
         - 획기적인 기술 진보
         - 산업 재편
         - 전반적인 시스템 변화
-        
