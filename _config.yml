@@ -8,9 +8,9 @@
 # Site settings
 title:       Jiyoun You
 email:       'younny418@gmail.com'
-description: ''
+description: 'Studying and Programming'
 baseurl:     '' # The subpath of your site, e.g. /blog
-url:         'https://type-jekyll.aspirethemes.com/' # The base hostname & protocol for your site
+url:         'https://github.com/jiyounyou' # The base hostname & protocol for your site
 twitter:     ''
 github:      ''
 instagram:   ''
