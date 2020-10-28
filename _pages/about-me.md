@@ -4,16 +4,18 @@ title: About Me
 #image: '/images/pages/about.jpeg'
 ---
 
-## Jiyoun You
-
-[![Gmail Badge](https://img.shields.io/badge/Gmail-d14836?style=flat-square&logo=Gmail&logoColor=white&link=mailto:younny418@gmail.com)](mailto:younny418@gmail.com) [![Github Badge](https://img.shields.io/badge/-Github-black?style=flat-square&logo=0E9648&link=https://github.com/jiyounyou/)](https://github.com/jiyounyou)
-
-<br>  
-
-### Hello, world!  
+# Jiyoun You
 - ENTJ ✨
 - Web-developer-to-be 💻
 - 한국어 / English 💬 
+
+<br>  
+
+## Contact me here
+[![Gmail Badge](https://img.shields.io/badge/Gmail-d14836?style=flat-square&logo=Gmail&logoColor=white&link=mailto:younny418@gmail.com)](mailto:younny418@gmail.com) 
+
+## Explore my projects
+[![Github Badge](https://img.shields.io/badge/-Github-black?style=flat-square&logo=0E9648&link=https://github.com/jiyounyou/)](https://github.com/jiyounyou)
 
 ### Studying ✍🏻
 - Java
