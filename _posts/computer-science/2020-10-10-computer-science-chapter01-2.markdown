@@ -5,9 +5,9 @@ tags: [computer, computerscience, programming]
 #image: '/images/posts/XXX.jpg'
 ---
 
-## 컴퓨터개론 1장 2절: 컴퓨터 개론
-
 숭실대학교 글로벌미디어학부 정기철 교수님의 수업을 듣고 정리했습니다.
+
+## 컴퓨터개론 1장 2절: 컴퓨터 개론
 
 ### 1. 컴퓨터의 개념
 - 컴퓨터 (Computer): 전자회로를 이용해 다양한 종류의 데이터를 처리하는 기계

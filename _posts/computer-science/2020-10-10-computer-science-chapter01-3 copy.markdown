@@ -5,9 +5,9 @@ tags: [computer, computerscience, programming]
 #image: '/images/posts/XXX.jpg'
 ---
 
-## 컴퓨터개론 1장 3절: 컴퓨터의 역사
-
 숭실대학교 글로벌미디어학부 정기철 교수님의 수업을 듣고 정리했습니다.
+
+## 컴퓨터개론 1장 3절: 컴퓨터의 역사
 
 ### 1. 기계식 계산기의 변천사
 - **신체 활용**
