@@ -5,6 +5,6 @@ title: Study Log
 ---
 
 I'm currently learning Java language and also teaching myself some basic computer knowleges.
-> Computer Science
-> Network
+> Computer Science  
+> Network  
 > Algorithm
