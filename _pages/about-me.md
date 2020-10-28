@@ -17,6 +17,7 @@ title: About Me
 ## Explore my projects
 [![Github Badge](https://img.shields.io/badge/-Github-black?style=flat-square&logo=0E9648&link=https://github.com/jiyounyou/)](https://github.com/jiyounyou)
 
+## More about myself
 ### Studying ✍🏻
 - Java
 - Algorithm
