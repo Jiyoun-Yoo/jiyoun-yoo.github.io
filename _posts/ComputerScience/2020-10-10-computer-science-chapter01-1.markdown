@@ -7,11 +7,12 @@ tags: [computer, computerscience, programming]
 
 ## 컴퓨터개론 1장 1절: ICT와 4차 산업혁명
 
+'숭실대학교 글로벌미디어학부 정기철 교수님의 수업을 듣고 정리했습니다.'
+
 ### 1. ICT 기술의 개념
 - **ICT 기술 (정보통신기술)** 
     = IT(정보기술/Information Technology) + CT(통신기술/CommunicationTechnology)
 - ICT 기술은 정보 기기의 하드웨어 및 기기 운영과 정보 관리에 필요한 소프트웨어 기술을 이용하여 정보를 수집, 생산, 가공, 보존, 전달, 활용하는 모든 방법
-
 
 ### 2. 정보 사회의 등장
 - **정보(Information)** : 실생활에 도움이 되도록 가공하고 정리한 자료를 의미
@@ -24,7 +25,6 @@ tags: [computer, computerscience, programming]
     - 제1의 물결 : '농업 혁명'
     - 제2의 물결 : 증기기관의 발명으로 인한 '산업 혁명'
     - 제3의 물결 : 컴퓨터의 발명으로 인한 '정보 혁명'
-
 
 ### 3. 4차 산업혁명 시대의 도래
 - 1-4차 산업혁명 분류와 설명
