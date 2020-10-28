@@ -25,10 +25,10 @@ image: '/images/pages/about.jpeg'
 - Traveling 
 - Learning new languages
 
-## Education
+### Education
 - Jul 2020 - Dec 2020 **BitCamp**
 - Mar 2011 - Feb 2016 **Soongsil University**
 
-## Career
+### Career
 - Jul 2019 - Jun 2020 **ST Unitas**
 - Jul 2017 - Sep 2018 **CMS Education**
