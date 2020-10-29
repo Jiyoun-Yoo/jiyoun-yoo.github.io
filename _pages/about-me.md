@@ -24,7 +24,7 @@ title: About Me
 
 ## More about myself
 -------
-### Studying ✍🏻
+### Currently Studying ✍🏻
 - Java
 - Algorithm
 - Html & CSS
@@ -33,7 +33,3 @@ title: About Me
 ### Education
 - Jul 2020 - Dec 2020 **BitCamp** - Studying **Web Programming**
 - Mar 2011 - Feb 2016 **Soongsil University** - Majored in **Biomedical Science**  
-
-### Career
-- Jul 2019 - Jun 2020 **ST Unitas**
-- Jul 2017 - Sep 2018 **CMS Education**

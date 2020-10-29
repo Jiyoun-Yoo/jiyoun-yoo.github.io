@@ -1,7 +1,7 @@
 ---
 layout: post
 title: '컴퓨터개론 1장 2절: 컴퓨터 개론'
-tags: [computer, computerscience, programming]
+tags: [computer-science]
 #image: '/images/posts/XXX.jpg'
 ---
 

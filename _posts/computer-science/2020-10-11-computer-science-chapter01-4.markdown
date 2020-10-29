@@ -1,7 +1,7 @@
 ---
 layout: post
 title: '컴퓨터개론 1장 4절: 컴퓨터의 종류'
-tags: [computer, computerscience, programming]
+tags: [computer-science]
 #image: '/images/posts/XXX.jpg'
 ---
 

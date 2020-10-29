@@ -1,7 +1,7 @@
 ---
 layout: post
 title: '컴퓨터개론 1장 6절: 미래 컴퓨팅 기술'
-tags: [computer, computerscience, programming]
+tags: [computer-science]
 #image: '/images/posts/XXX.jpg'
 ---
 

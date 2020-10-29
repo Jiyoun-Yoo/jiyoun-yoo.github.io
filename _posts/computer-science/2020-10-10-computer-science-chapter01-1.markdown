@@ -1,7 +1,7 @@
 ---
 layout: post
 title: '컴퓨터개론 1장 1절: ICT와 4차 산업혁명'
-tags: [computer, computerscience, programming]
+tags: [computer-science]
 #image: '/images/posts/XXX.jpg'
 ---
 
