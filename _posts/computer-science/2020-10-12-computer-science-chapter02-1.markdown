@@ -1,7 +1,7 @@
 ---
 layout: post
 title: '컴퓨터 개론 2장 1절: 수의 체계와 변환(2진수)'
-tags: [computer, computerscience, programming]
+tags: [computer-science]
 #image: '/images/posts/XXX.jpg'
 ---
 
