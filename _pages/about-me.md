@@ -14,13 +14,11 @@ title: About Me
 
 ## Contact me here
 -------
-Feel free to send me an E-mail when you need.  
-[![Gmail Badge](https://img.shields.io/badge/Gmail-d14836?style=flat-square&logo=Gmail&logoColor=white&link=mailto:younny418@gmail.com)](mailto:younny418@gmail.com)
+[![Gmail Badge](https://img.shields.io/badge/Gmail-d14836?style=flat-square&logo=Gmail&logoColor=white&link=mailto:younny418@gmail.com)](mailto:younny418@gmail.com) Feel free to send me an E-mail when you need.  
 
 ## Explore my projects
 -------
-Please visit my Github to see what projects I did.  
-[![Github Badge](https://img.shields.io/badge/-Github-black?style=flat-square&logo=0E9648&link=https://github.com/jiyounyou/)](https://github.com/jiyounyou)
+[![Github Badge](https://img.shields.io/badge/-Github-black?style=flat-square&logo=0E9648&link=https://github.com/jiyounyou/)](https://github.com/jiyounyou) Please visit my Github to see what projects I did.  
 
 <br>  
 
