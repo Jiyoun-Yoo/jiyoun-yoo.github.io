@@ -24,12 +24,12 @@ title: About Me
 
 ## More about myself
 -------
+### Education
+- Jul 2020 - Dec 2020 **BitCamp** - Studying **Web Programming**
+- Mar 2011 - Feb 2016 **Soongsil University** - Majored in **Biomedical Science**  
+  
 ### Currently Studying ✍🏻
 - Java
 - Algorithm
 - Html & CSS
 - JavaScript
-
-### Education
-- Jul 2020 - Dec 2020 **BitCamp** - Studying **Web Programming**
-- Mar 2011 - Feb 2016 **Soongsil University** - Majored in **Biomedical Science**  
