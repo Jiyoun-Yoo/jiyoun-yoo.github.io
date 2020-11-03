@@ -19,6 +19,7 @@
 ## More about myself
 ### Currently Studying ✍🏻
 - Java
+- Algorithm
 - Html & CSS
 - JavaScript
 
