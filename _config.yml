@@ -6,8 +6,8 @@ minimal_mistakes_skin    : "default" # 태마 색 설정 "air", "aqua", "contras
 locale                   : "ko-KR"
 title                    : "Jiyoun You" # Meta 태그에 들어가는 영역 , masthead_title등이 없으면 기본값으로 나온다.
 title_separator          : "&#124;" # 타이틀 사이 구분자 <title>Welcome to Jekyll | Minimal Mistakes</title> 해당 형식으로 들어갑니다.
-subtitle                 : "Version 1.0" # 타이틀 아래에 나올 작은 글씨 
-name                     : "유지연" # 맨 하단 이름 찍히는 영역
+subtitle                 : "since Jul 2020" # 타이틀 아래에 나올 작은 글씨 
+name                     : "Jiyoun" # 맨 하단 이름 찍히는 영역
 description              : "웹 개발자가 되기 위해 공부하고 있습니다." # Meta 태그에 들어가는 영역 
 url                      : "https://github.com/jiyounyou/" # GitBlog 호스트 주소
 baseurl                  : # subPath https://7271kim.github.io/blog라고 하고 싶을 시 "/blog" 라고 적는다.
