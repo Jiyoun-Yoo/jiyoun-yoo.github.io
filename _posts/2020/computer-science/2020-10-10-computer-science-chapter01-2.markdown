@@ -1,15 +1,30 @@
 ---
-layout: post
 title: '컴퓨터개론 1장 2절: 컴퓨터 개론'
-tags: [computer-science]
-#image: '/images/posts/XXX.jpg'
+layout: single
+author_profile: true
+read_time: true
+comments: true
+share: true
+related: true
+categories:
+- Computer-Science
+toc: true
+toc_sticky: true
+toc_label: 목차
+description: 숭실대학교 글로벌미디어학부 정기철 교수님의 컴퓨터 개론 수업을 듣고 정리했습니다.
+article_tag1: 1. 컴퓨터의 개념
+article_tag2: 2. 정보 사회의 등장
+article_tag3: 
+article_section: 컴퓨터 개론
+meta_keywords: 컴퓨터 개론, computer-science
+last_modified_at: '2020-10-10 23:00:00 +0800'
 ---
 
-숭실대학교 글로벌미디어학부 정기철 교수님의 수업을 듣고 정리했습니다.
+# 컴퓨터개론 1장 2절: 컴퓨터 개론
 
-## 컴퓨터개론 1장 2절: 컴퓨터 개론
+숭실대학교 글로벌미디어학부 정기철 교수님의 컴퓨터 개론 수업을 듣고 정리했습니다.
 
-### 1. 컴퓨터의 개념
+## 1. 컴퓨터의 개념
 - 컴퓨터 (Computer): 전자회로를 이용해 다양한 종류의 데이터를 처리하는 기계
     - 컴퓨터라는 용어의 기원 : compute(계산하다) -> computer(계산하는 사람)
 - 컴퓨터의 특징
@@ -21,7 +36,7 @@ tags: [computer-science]
     - 피에트 몬드리안 추상화는 수직,수평선, 사각형이 가지는 느낌을 미적으로 담아내고 있는데, 이러한 추상화 기법은 예술 외에 시스템 설계사나 컴퓨터 프로그래머 등이 **세부적인 사항에 신경 쓰지 않고 핵심에만 집중**할 수 있도록 도움
     - 예술이든 기술이든 추상화의 기본 정의는 바로 복잡한 문제를 핵심적인 것부터 다루거나 표현하는 방법이라는 점
 
-### 2. 컴퓨터의 구성요소
+## 2. 컴퓨터의 구성요소
 - 컴퓨터는 크게 하드웨어와 소프트웨어로 구성
 - 하드웨어와 소프트웨어의 역할과 서로 간의 관계를 잘 알면 전체 시스템을 이해하는 데 큰 도움이 될 것임
 - **하드웨어(Hardware)**
