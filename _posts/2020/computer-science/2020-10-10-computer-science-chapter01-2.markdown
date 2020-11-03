@@ -50,8 +50,8 @@ last_modified_at: '2020-10-10 23:00:00 +0800'
 
 ### **소프트웨어(Software)**
 - 하드웨어의 기능을 원할하게 수행하기 위한 '명령들의 집합'
-  - 소프트웨어의 종류
-    - 시스템 소프트웨어(System software) : 컴퓨터를 관리하기 위한 소프트웨어나 사용자에게 편의 기능을 제공하는 소프트웨어를 포함해 컴퓨터 사용에 필수적인 프로그램들
-      - 예) Operating system, Device drivers, Utilities
-    - 응용 소프트웨어(Application software) : 특정 업무를 할 때 필요한 프로그램들
-    - 악성 소프트웨어(Malicious software) : 다른 컴퓨터나 서버, 클라이언트 등에 피해를 입히기 위한 의도로 사용되는 프로그램들
+- 소프트웨어의 종류
+  - 시스템 소프트웨어(System software) : 컴퓨터를 관리하기 위한 소프트웨어나 사용자에게 편의 기능을 제공하는 소프트웨어를 포함해 컴퓨터 사용에 필수적인 프로그램들
+    예) Operating system, Device drivers, Utilities
+  - 응용 소프트웨어(Application software) : 특정 업무를 할 때 필요한 프로그램들
+  - 악성 소프트웨어(Malicious software) : 다른 컴퓨터나 서버, 클라이언트 등에 피해를 입히기 위한 의도로 사용되는 프로그램들

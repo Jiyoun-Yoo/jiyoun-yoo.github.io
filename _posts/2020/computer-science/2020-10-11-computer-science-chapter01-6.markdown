@@ -18,8 +18,8 @@ article_tag3: 3. 인공지능
 article_tag4: 4. 로봇
 article_tag5: 5. 드론
 article_tag6: 6. 자율주행 자동차
-article_tag7: 7.  가상, 증강 현실
-article_tag8: 8.  가상, 증강 현실
+article_tag7: 7. 가상, 증강 현실
+article_tag8: 8. 가상, 증강 현실
 article_section: 컴퓨터 개론
 meta_keywords: 컴퓨터 개론, computer-science
 last_modified_at: '2020-10-11 23:00:00 +0800'

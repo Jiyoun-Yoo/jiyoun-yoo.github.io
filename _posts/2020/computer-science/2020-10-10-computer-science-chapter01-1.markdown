@@ -62,7 +62,8 @@ last_modified_at: '2020-10-10 23:00:00 +0800'
 
 ## **4. 4차 산업혁명**
   - 4차 산업혁명 (The Fourth Industrial Revolution) : 인공지능, 사물인터넷, 빅데이터, 모바일 등 첨단 ICT 기술이 경제, 사회 전반에 융합되어 혁신적인 변화가 일어나는 차세대 산업혁명으로, **2016년** 세계경제포럼인 **다보스포럼**에서 **클라우스 슈밥** 회장이 처음 제시한 개념
-  - 4차 산업 혁명의 주요 특징
+
+### 4차 산업 혁명의 주요 특징
     - 연결 (Interconnection)
     - 정보의 투명화 (Information transparency)
     - 기술의 지원 (Technical assistance)
