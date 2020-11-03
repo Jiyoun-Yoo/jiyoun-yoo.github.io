@@ -1,5 +1,5 @@
 ---
-title: 컴퓨터개론 1장 1절: ICT와 4차 산업혁명
+title: '컴퓨터개론 1장 1절: ICT와 4차 산업혁명'
 layout: single
 author_profile: true
 read_time: true
