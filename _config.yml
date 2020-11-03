@@ -9,12 +9,12 @@ title_separator          : "&#124;" # 타이틀 사이 구분자 <title>Welcome 
 subtitle                 : "Version 1.0" # 타이틀 아래에 나올 작은 글씨 
 name                     : "유지연" # 맨 하단 이름 찍히는 영역
 description              : "웹 개발자가 되기 위해 공부하고 있습니다." # Meta 태그에 들어가는 영역 
-url                      : "https://jiyounyou.github.io/" # GitBlog 호스트 주소
+url                      : "https://github.com/jiyounyou/" # GitBlog 호스트 주소
 baseurl                  : # subPath https://7271kim.github.io/blog라고 하고 싶을 시 "/blog" 라고 적는다.
 repository               : "jiyounyou/jiyounyou.github.io" # GitHub username/repo-name  
 teaser                   : # "/assets/images/senior-couple-4723737_640.jpg" # 홈페이지 기본 티져 이미지
 logo                     : # 타이틀 옆에 작게 들어갈 이미지.
-masthead_title           : "공부하고 배운 것을 기록합니다." # 홈페이지 최 상탄에 들어갈 타이틀
+masthead_title           : "공부, 그리고 기록" # 홈페이지 최 상탄에 들어갈 타이틀
 breadcrumbs              : true # 브래드크럼 사용 여부 true, false (default) , _data/ui-text.yml에 다국어 지원 가능합니다.
 words_per_minute         : 200 # 해당 포스트 읽는데 걸리는 시간을 계산하기 위해 대락 분당 읽는 수가 몇글자가 될지 적는 공간.
 
@@ -22,7 +22,7 @@ words_per_minute         : 200 # 해당 포스트 읽는데 걸리는 시간을 
 comments:
   provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
-    shortname            : 7271kim # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : jiyounyou # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -102,16 +102,16 @@ analytics:
 author:
   name             : "유지연"
   avatar           : "/assets/images/profile/profilephoto.jpg" # 프로필 이미지
-  bio              : "웹 개발자가 되기 위해 공부하고 있습니다. <br> 강의를 듣거나 스스로 공부하면서 기록한 내용들을 정리하여 포스팅합니다. <br> 수정해야 할 부분이 있다면 알려주시면 감사하겠습니다."
+  bio              : "웹 개발자가 되기 위해 공부하고 있습니다. <br> 공부하면서 기록한 내용들을 포스팅합니다."
   location         : "Seoul, Korea"
   email            : "younny418@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      #url: mailto:7271kim@naver.com
+      #url: mailto:younny418@gmail.com
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://jiyounyou.github.io/"
+      url: "https://github.com/jiyounyou"
     - label: "Blog"
       icon: "fas fa-fw fa-link"
       url: "https://jiyounyou.github.io/"
@@ -120,7 +120,7 @@ author:
       # url: "https://twitter.com/"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
-      url: "https://www.facebook.com/seokjin.kim.16"
+      #url: "https://www.facebook.com/"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
@@ -133,7 +133,7 @@ footer:
       url: mailto:younny418@gmail.com
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://jiyounyou.github.io/"
+      url: "https://github.com/jiyounyou"
     - label: "Blog"
       icon: "fas fa-fw fa-link"
       url: "https://jiyounyou.github.io/"
