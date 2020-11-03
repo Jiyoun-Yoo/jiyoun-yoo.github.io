@@ -128,10 +128,10 @@ author:
 # Site Footer
 footer:
   links:
-    - label: "email"
+    - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: mailto:younny418@gmail.com
-    - label: "github"
+    - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/jiyounyou"
 
