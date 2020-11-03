@@ -10,7 +10,7 @@ categories:
 - Computer-Science
 toc: true
 toc_sticky: true
-toc_label: 목차
+toc_label: Contents
 description: 숭실대학교 글로벌미디어학부 정기철 교수님의 컴퓨터 개론 수업을 듣고 정리했습니다.
 article_tag1: 1. 슈퍼 컴퓨터(Super Computer)
 article_tag2: 2. 대형 컴퓨터(Mainframe)
@@ -24,9 +24,6 @@ last_modified_at: '2020-10-11 23:00:00 +0800'
 ---
 
 숭실대학교 글로벌미디어학부 정기철 교수님의 컴퓨터 개론 수업을 듣고 정리했습니다.
-
-
-컴퓨터는 규모와 처리 성능에 따라서 나눌 수 있다.
 
 ## 1. **슈퍼 컴퓨터(Super Computer)**
 - **슈퍼 컴퓨터** : 고속도, 고용량의 컴퓨터로, 기상 해석, 항공기 또는 핵융합로 시뮬레이션, 우주탐사, 신약 개발 등 대량의 데이터를 고속 처리하기 위한 목적으로 사용

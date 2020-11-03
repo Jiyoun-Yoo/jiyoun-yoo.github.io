@@ -10,7 +10,7 @@ categories:
 - Computer-Science
 toc: true
 toc_sticky: true
-toc_label: 목차
+toc_label: Contents
 description: 숭실대학교 글로벌미디어학부 정기철 교수님의 컴퓨터 개론 수업을 듣고 정리했습니다.
 article_tag1: 1. 기계식 계산기의 변천사
 article_tag2: 2. 전자식 컴퓨터의 시초

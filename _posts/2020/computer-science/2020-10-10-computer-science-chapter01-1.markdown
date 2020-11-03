@@ -10,7 +10,7 @@ categories:
 - Computer-Science
 toc: true
 toc_sticky: true
-toc_label: 목차
+toc_label: Contents
 description: 숭실대학교 글로벌미디어학부 정기철 교수님의 컴퓨터 개론 수업을 듣고 정리했습니다.
 article_tag1: 1. ICT 기술의 개념
 article_tag2: 2. 정보 사회의 등장
@@ -24,7 +24,7 @@ last_modified_at: '2020-10-10 23:00:00 +0800'
 
 ## 1. ICT 기술의 개념
 ### **ICT 기술 (정보통신기술)** 
-    = IT(정보기술/Information Technology) + CT(통신기술/CommunicationTechnology)
+- ICT = IT(정보기술/Information Technology) + CT(통신기술/CommunicationTechnology)
 - ICT 기술은 정보 기기의 하드웨어 및 기기 운영과 정보 관리에 필요한 소프트웨어 기술을 이용하여 정보를 수집, 생산, 가공, 보존, 전달, 활용하는 모든 방법
 
 ## 2. 정보 사회의 등장
