@@ -114,7 +114,7 @@ author:
       url: "https://github.com/jiyounyou"
     - label: "Blog"
       icon: "fas fa-fw fa-link"
-      url: "https://jiyounyou.github.io/"
+      #url: "https://jiyounyou.github.io/"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
