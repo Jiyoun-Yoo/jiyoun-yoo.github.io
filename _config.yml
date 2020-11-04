@@ -104,11 +104,11 @@ author:
   avatar           : "/assets/images/profile/profilephoto.jpg" # 프로필 이미지
   bio              : "웹 개발자가 되기 위해 공부하고 있습니다. <br> 공부하면서 기록한 내용들을 포스팅합니다."
   location         : "Seoul, Korea"
-  email            : "younny418@gmail.com"
+  #email            : "younny418@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      #url: mailto:younny418@gmail.com
+      url: mailto:younny418@gmail.com
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/jiyounyou"
