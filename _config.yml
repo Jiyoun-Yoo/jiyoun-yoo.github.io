@@ -10,7 +10,7 @@ subtitle                 : "Since Jul 2020" # 타이틀 아래에 나올 작은 
 name                     : "Jiyoun" # 맨 하단 이름 찍히는 영역
 description              : "웹 개발자가 되기 위해 공부하고 있습니다." # Meta 태그에 들어가는 영역 
 url                      : "https://github.com/jiyounyou/" # GitBlog 호스트 주소
-baseurl                  : # subPath https://7271kim.github.io/blog라고 하고 싶을 시 "/blog" 라고 적는다.
+baseurl                  : # subPath https://jiyounyou.github.io/blog라고 하고 싶을 시 "/blog" 라고 적는다.
 repository               : "jiyounyou/jiyounyou.github.io" # GitHub username/repo-name  
 teaser                   : # "/assets/images/senior-couple-4723737_640.jpg" # 홈페이지 기본 티져 이미지
 logo                     : # 타이틀 옆에 작게 들어갈 이미지.
@@ -108,7 +108,7 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      #url: mailto:younny418@gmail.com
+      url: mailto:younny418@gmail.com
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/jiyounyou"
