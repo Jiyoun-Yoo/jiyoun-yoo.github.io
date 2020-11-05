@@ -47,14 +47,14 @@ last_modified_at: '2020-10-01 22:00:00 +0800'
 - 큰 데이터가 있더라도 작게 나누어서 보내야 한다.
 - 큰 데이터를 그대로 보내면 그 데이터가 네트워크의 대역폭을 너무 많이 차지해서 다른 패킷의 흐름을 막을 위험이 있다.
 
-![패킷이란]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-basic/packet.png){: .align-center}
+![패킷이란]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-basic/packet.png){: .align-center}{: width="80%" height="80%"}
 
 - **대역폭** : 일반적으로는 네트워크에서 이용 가능한 최대 전송 속도로 정보를 전송할 수 있는 단위 시간당 전송량을 의미
 - 데이터를 패킷으로 분할하여 전송하는데,  패킷이 도착하면 번호 순으로 정렬하여 원래의 데이터대로 되돌리는 작업을 해야 한다.
 - 예) 사진 파일 전송  
   먼저 사진 파일을 패킷으로 분할한다.
   순서 없이 도착하는 패킷을 순서대로 나열하여 원래 사진으로 만든다.
-  
+
 ![패킷 사용 예]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-basic/packet.png){: .align-center}
 
 
