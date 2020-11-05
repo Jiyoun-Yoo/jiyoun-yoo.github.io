@@ -46,13 +46,17 @@ last_modified_at: '2020-10-01 22:00:00 +0800'
 - 컴퓨터 간에 데이터를 주고받을 때 네트워를 통해 전송되는 데이터의 작은 조각
 - 큰 데이터가 있더라도 작게 나누어서 보내야 한다.
 - 큰 데이터를 그대로 보내면 그 데이터가 네트워크의 대역폭을 너무 많이 차지해서 다른 패킷의 흐름을 막을 위험이 있다.
+
+![패킷이란]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-basic/packet.png){: .align-center}
+
 - **대역폭** : 일반적으로는 네트워크에서 이용 가능한 최대 전송 속도로 정보를 전송할 수 있는 단위 시간당 전송량을 의미
 - 데이터를 패킷으로 분할하여 전송하는데,  패킷이 도착하면 번호 순으로 정렬하여 원래의 데이터대로 되돌리는 작업을 해야 한다.
 - 예) 사진 파일 전송  
   먼저 사진 파일을 패킷으로 분할한다.
   순서 없이 도착하는 패킷을 순서대로 나열하여 원래 사진으로 만든다.
+  
+![패킷 사용 예]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-basic/packet.png){: .align-center}
 
-![패킷이란]({{ site.url }}{{ site.baseurl }}/assets/images/post/network-basic/이미지명.확장자){: .align-center}
 
 # LESSON 02 정보의 양을 나타내는 단위
 
@@ -64,7 +68,7 @@ last_modified_at: '2020-10-01 22:00:00 +0800'
 - 8 bit  = 1 byte
 - 컴퓨터는 기본적으로 바이트 단위로 데이터를 읽고 쓰는 작업을 한다. 이 때, 모든 것을 0과 1의 집합으로만 다룬다.
 
-![비트와 바이트]({{ site.url }}{{ site.baseurl }}/assets/images/post/network-basic/이미지명.확장자){: .align-center}
+![비트와 바이트]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-basic/이미지명.확장자){: .align-center}
 
 ### **ASCII 코드**
 - American Standard Code for Information Interchange
@@ -72,7 +76,7 @@ last_modified_at: '2020-10-01 22:00:00 +0800'
   예) 문자 A → ASCII 코드 65
 - 문자도 사진과 마찬가지로 상대방에게 숫자를 패킷으로 나누어서 전송하는데, 받은 쪽에서 패킷을 원래 값으로 되돌리는 작업을 한다.
 
-![아스키 코드]({{ site.url }}{{ site.baseurl }}/assets/images/post/network-basic/이미지명.확장자){: .align-center}
+![아스키 코드]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-basic/이미지명.확장자){: .align-center}
 
 # LESSON 03 랜과 왠
 
@@ -86,7 +90,7 @@ last_modified_at: '2020-10-01 22:00:00 +0800'
   - Wide Area Network(광역 통신망)
   - 지리적으로 넓은 범위에 구축된 네트워크
 
-![랜과 왠]({{ https://github.com/jiyounyou/ }}{{ site.baseurl }}/assets/images/post/network-basic/ranwan.png){: .align-center} 
+![랜과 왠]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-basic/ranwan.png){: .align-center} 
 
 
 
