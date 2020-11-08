@@ -90,7 +90,7 @@ last_modified_at: '2020-10-01 22:00:00 +0800'
   - Wide Area Network(광역 통신망)
   - 지리적으로 넓은 범위에 구축된 네트워크
 
-![랜과 왠]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-basic/ranwan.png){: .align-center}{: width="60%" height="60%"}
+![랜과 왠]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-basic/ranwan.png){: .align-center}{: width="70%" height="70%"}
 
 
 
