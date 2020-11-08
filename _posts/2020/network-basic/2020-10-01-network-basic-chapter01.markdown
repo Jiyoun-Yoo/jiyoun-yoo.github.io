@@ -57,7 +57,7 @@ last_modified_at: '2020-10-01 22:00:00 +0800'
   순서 없이 도착하는 패킷을 순서대로 나열하여 원래 사진으로 만든다.
 
 ![패킷 사용 예]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-basic/packet-example1.png){: .align-center}{: width="60%" height="80%"}
-![패킷 사용 예]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-basic/packet-example2.png){: .align-center}{: width="60%" height="80%"}
+![패킷 사용 예]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-basic/packet-example2.png){: .align-center}{: width="80%" height="80%"}
 
 
 ---
