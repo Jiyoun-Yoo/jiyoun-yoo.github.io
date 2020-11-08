@@ -71,7 +71,7 @@ last_modified_at: '2020-10-01 22:00:00 +0800'
 - 8 bit  = 1 byte
 - 컴퓨터는 기본적으로 바이트 단위로 데이터를 읽고 쓰는 작업을 한다. 이 때, 모든 것을 0과 1의 집합으로만 다룬다.
 
-![비트와 바이트]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-basic/bit-byte.png){: .align-center}{: width="60%" height="60%"}
+![비트와 바이트]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-basic/bit-byte.png){: .align-center}{: width="80%" height="80%"}
 
 ### **ASCII 코드**
 - American Standard Code for Information Interchange
