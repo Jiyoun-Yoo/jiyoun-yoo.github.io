@@ -45,7 +45,7 @@ last_modified_at: '2020-10-07 22:00:00 +0800'
 ![OSI 모델]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-for-everyone/OSI-model1.png){: .align-center}{: width="60%" height="60%"}
 - 통신할 때 데이터는 맨 위의 응용 계층에서 순차적으로 아래 계층으로 전달된다.
 
-- 각 계층에 대한 설명
+### 7계층에 대한 설명
 ![OSI 모델]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-for-everyone/OSI-model2.png){: .align-center}{: width="100%" height="100%"}
 
 - 데이터를 전송하는 쪽(**송신 측**)은 데이터를 보내기 위해서 상위 층에서 하위 층으로 데이터를 전달한다.
