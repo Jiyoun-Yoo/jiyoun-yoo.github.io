@@ -9,7 +9,7 @@ related: true
 categories:
 - Computer-Science
 tag:
-- Computer-Science
+- computer-science
 toc: true
 toc_sticky: true
 toc_label: Contents
@@ -19,7 +19,7 @@ article_tag2: 2. 정보 사회의 등장
 article_tag3: 3. 4차 산업혁명 시대의 도래
 article_section: 컴퓨터 개론
 meta_keywords: 컴퓨터 개론, computer-science
-last_modified_at: '2020-10-10 23:00:00 +0800'
+last_modified_at: '2020-10-6 23:00:00 +0800'
 ---
 
 숭실대학교 글로벌미디어학부 정기철 교수님의 컴퓨터 개론 수업을 듣고 정리했습니다.

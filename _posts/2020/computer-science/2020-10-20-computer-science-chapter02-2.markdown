@@ -9,14 +9,12 @@ related: true
 categories:
 - Computer-Science
 tag:
-- Computer-Science
+- computer-science
 toc: true
 toc_sticky: true
 toc_label: Contents
 description: 숭실대학교 글로벌미디어학부 정기철 교수님의 컴퓨터 개론 수업을 듣고 정리했습니다.
 article_tag1: 1. 정수의 표현
-#article_tag2: 
-#article_tag3: 
 article_section: 컴퓨터 개론
 meta_keywords: 컴퓨터 개론, computer-science
 last_modified_at: '2020-10-20 23:00:00 +0800'

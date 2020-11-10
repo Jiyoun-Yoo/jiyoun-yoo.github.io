@@ -9,7 +9,7 @@ related: true
 categories:
 - Computer-Science
 tag:
-- Computer-Science
+- computer-science
 toc: true
 toc_sticky: true
 toc_label: Contents
