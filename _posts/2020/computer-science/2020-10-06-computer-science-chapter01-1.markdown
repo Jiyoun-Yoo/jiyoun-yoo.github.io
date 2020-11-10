@@ -28,6 +28,7 @@ last_modified_at: '2020-10-6 23:00:00 +0800'
 ## ICT 기술 (정보통신기술)
 - ICT = IT(정보기술/Information Technology) + CT(통신기술/CommunicationTechnology)
 - ICT 기술은 정보 기기의 하드웨어 및 기기 운영과 정보 관리에 필요한 소프트웨어 기술을 이용하여 정보를 수집, 생산, 가공, 보존, 전달, 활용하는 모든 방법
+<br>
 
 # 2. 정보 사회의 등장
 - **정보(Information)** : 실생활에 도움이 되도록 가공하고 정리한 자료를 의미
