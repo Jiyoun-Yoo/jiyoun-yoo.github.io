@@ -57,7 +57,7 @@ last_modified_at: '2020-10-07 22:00:00 +0800'
 ### TCP/IP 모델의 4계층
 - TCP/IP 모델은 4계층으로 이루어져 있다.
 - 각 계층에는 다양한 프로토콜이 있다.
-![TCP/IP 모델]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-for-everyone/TCP-IP-model1.png){: .align-center}{: width="60%" height="60%"}
+![TCP/IP 모델]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-for-everyone/TCP-IP-model1.png){: .align-center}{: width="70%" height="70%"}
 
 ### OSI 모델과 TCP/IP 모델 비교
 - OSI 모델의 응용 계층, 표현 계층, 세션 계층이 TCP/IP 모델에서는 응용 계층으로 합쳐져 있다.

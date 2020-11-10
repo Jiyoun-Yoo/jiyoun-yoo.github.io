@@ -99,8 +99,6 @@ last_modified_at: '2020-10-01 22:00:00 +0800'
 |  속도  | 빠르다                    | 느리다                 |
 |  오류  | 적다                      | 많다                   |
 
-![랜과 왠]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-for-everyone/ranwan.png){: .align-center}{: width="70%" height="70%"}
-
 ---
 # LESSON 04 가정에서 하는 랜 구성
   
