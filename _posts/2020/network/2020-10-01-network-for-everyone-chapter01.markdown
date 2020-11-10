@@ -1,5 +1,5 @@
 ---
-title: '1장 네트워크 첫걸음'
+title: '모두의 네트워크 1장 네트워크 첫걸음'
 layout: single
 author_profile: true
 read_time: true
@@ -7,9 +7,9 @@ comments: true
 share: true
 related: true
 categories:
-- Network-Basic
+- Network
 tag:
-- Network-Basic
+- network-for-everyone
 toc: true
 toc_sticky: true
 toc_label: Contents
@@ -48,16 +48,15 @@ last_modified_at: '2020-10-01 22:00:00 +0800'
 - 큰 데이터가 있더라도 작게 나누어서 보내야 한다.
 - 큰 데이터를 그대로 보내면 그 데이터가 네트워크의 대역폭을 너무 많이 차지해서 다른 패킷의 흐름을 막을 위험이 있다.
 
-![패킷이란]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-basic/packet.png){: .align-center}{: width="60%" height="60%"}
+![패킷이란]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-for-everyone/packet.png){: .align-center}{: width="60%" height="60%"}
 
 - **대역폭** : 일반적으로는 네트워크에서 이용 가능한 최대 전송 속도로 정보를 전송할 수 있는 단위 시간당 전송량을 의미
 - 데이터를 패킷으로 분할하여 전송하는데,  패킷이 도착하면 번호 순으로 정렬하여 원래의 데이터대로 되돌리는 작업을 해야 한다.
-- 예) 사진 파일 전송  
-  먼저 사진 파일을 패킷으로 분할한다.
-  순서 없이 도착하는 패킷을 순서대로 나열하여 원래 사진으로 만든다.
+### 패킷 사용의 예
+- 사진 파일 전송시 먼저 사진 파일을 패킷으로 분할한다. 그리고 순서 없이 도착하는 패킷을 순서대로 나열하여 원래 사진으로 만든다.
 
-![패킷 사용 예]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-basic/packet-example1.png){: .align-center}{: width="60%" height="60%"}
-![패킷 사용 예]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-basic/packet-example2.png){: .align-center}{: width="60%" height="60%"}
+![패킷 사용 예]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-for-everyone/packet-example1.png){: .align-center}{: width="60%" height="60%"}
+![패킷 사용 예]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-for-everyone/packet-example2.png){: .align-center}{: width="60%" height="60%"}
 
 
 ---
@@ -71,7 +70,7 @@ last_modified_at: '2020-10-01 22:00:00 +0800'
 - 8 bit  = 1 byte
 - 컴퓨터는 기본적으로 바이트 단위로 데이터를 읽고 쓰는 작업을 한다. 이 때, 모든 것을 0과 1의 집합으로만 다룬다.
 
-![비트와 바이트]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-basic/bit-byte.png){: .align-center}{: width="80%" height="80%"}
+![비트와 바이트]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-for-everyone/bit-byte.png){: .align-center}{: width="80%" height="80%"}
 
 ### **ASCII 코드**
 - American Standard Code for Information Interchange
@@ -79,7 +78,7 @@ last_modified_at: '2020-10-01 22:00:00 +0800'
   예) 문자 A → ASCII 코드 65
 - 문자도 사진과 마찬가지로 상대방에게 숫자를 패킷으로 나누어서 전송하는데, 받은 쪽에서 패킷을 원래 값으로 되돌리는 작업을 한다.
 
-![아스키 코드]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-basic/이미지명.확장자){: .align-center}{: width="60%" height="60%"}
+![아스키 코드]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-for-everyone/이미지명.확장자){: .align-center}{: width="60%" height="60%"}
 
 ---
 # LESSON 03 랜과 왠
@@ -94,7 +93,7 @@ last_modified_at: '2020-10-01 22:00:00 +0800'
   - Wide Area Network(광역 통신망)
   - 지리적으로 넓은 범위에 구축된 네트워크
 
-![랜과 왠]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-basic/ranwan.png){: .align-center}{: width="70%" height="70%"}
+![랜과 왠]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-for-everyone/ranwan.png){: .align-center}{: width="70%" height="70%"}
 
 ---
 # LESSON 04 가정에서 하는 랜 구성
@@ -119,13 +118,12 @@ last_modified_at: '2020-10-01 22:00:00 +0800'
   - 외부 사용자와 메일을 주고받으려면 메일 서버를 외부에 공개한다.
   - 외부에서 도메인 이름을 사용하여 회사의 서버에 접속하려면 DNS 서버를 외부에 공개한다.
 
-## 소규모 회사
+### 소규모 회사의 네트워크
 - 회사에서는 서버를 운영하기 위해 서버를 사내에 설치하거나 데이터 센터를 두거나 클라우드(cloud)를 둘 수 있다.
   - **데이터 센터** : 대량의 데이터를 보관하기 위해 데이터 센터를 서버나 네트워크 기기를 설치한 전용 시설
   - **클라우드** : 인터넷을 통해 소프트웨어나 하드웨어 등의 컴퓨팅 서비스를 제공하는 것으로, 인터넷에 접속하기만 하면 언제 어디서든 이용할 수 있다.
 
 ### 온프레미스
-
 - 사내 또는 데이터 센터에 서버를 두고 운영하는 것을 **온프레미스**(on-premise)라고 한다.
 - 사내에서 서버를 운영하는 경우에는 회사 내에 **서버 장비실**을 두고 그곳에 랙(선반)을 설치한다.
 - 랙 안에는 **라우터**와 **스위치**를 설치할 수 있다. 라우터는 주로 무선 랜 기능이 있는 사용한다.
@@ -142,4 +140,4 @@ last_modified_at: '2020-10-01 22:00:00 +0800'
 - **왠**Wide Area Network, WAN, 원거리 통신망) : 랜을 다시 하나로 묶는 거대한 네트워크다. 특정 도시, 국가, 대륙과 같이 매우 넓은 범위를 연결하는 네트워크를 말한다. 넓은 지역에 설치된 컴퓨터들 간의 정보와 자원을 공유하기에 적합하도록 설계한 컴퓨터 통신망이다.
 - **인터넷 서비스 제공자**(Internet Service Provider, ISP) : 인터넷에 접속하는 수단을 제공하는 주체다. 일반 사용자, 기업체, 기관, 단체 등이 인터넷에 접속하여 인터넷을 이용할 수 있도록 돕는 사업자다. 현재는 KT, U+, SK 브로드밴드와 같은 ISP가 인터넷 서비스를 제공한다.
 - **서버**(server) : 컴퓨터 네트워크에서 다른 컴퓨터에 서비스를 제공하기 위한 컴퓨터 또는 프로그램이다. 반대로 서버에서 보내 주는 정보 서비스를 받는 측 또는 요구하는 측의 컴퓨터 또는 프로그램은 **클라이언트**라고 한다.
-- **DMZ**(DeMilitarized Zone) : 네트워크 구성 중에서 일반적으로 인터넷인 외부 네트워크와 내부 네트워크 사이에 위치한 중간 지대(서브넷)을 말한다. 네트워크의 보안 영역을 ㅗ외부 공격자가 내부 네트워크에 침투하는 것을 막는 역할을 한다.
+- **DMZ**(DeMilitarized Zone) : 네트워크 구성 중에서 일반적으로 인터넷인 외부 네트워크와 내부 네트워크 사이에 위치한 중간 지대(서브넷)을 말한다. 네트워크의 보안 영역을 외부 공격자가 내부 네트워크에 침투하는 것을 막는 역할을 한다.
