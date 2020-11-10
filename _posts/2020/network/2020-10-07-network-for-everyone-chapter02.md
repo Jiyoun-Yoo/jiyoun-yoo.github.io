@@ -53,7 +53,7 @@ last_modified_at: '2020-10-07 22:00:00 +0800'
 - 데이터를 받는 쪽(**수신 측**)은 하위 계층에서 상위 계층으로 각 계층을 통해 전달된 데이터를 받게 된다.
 ![OSI 모델에서 데이터 송수신]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-for-everyone/OSI-model3.png){: .align-center}{: width="80%" height="80%"}
 
-## ICP/IP 모델이란?
+## 2. TCP/IP 모델이란?
 - TCP/IP 모델은 4계층으로 이루어져 있다.
 - 각 계층에는 다양한 프로토콜이 있다.
 ![TCP/IP 모델]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-for-everyone/TCP-IP-model1.png){: .align-center}{: width="60%" height="60%"}
