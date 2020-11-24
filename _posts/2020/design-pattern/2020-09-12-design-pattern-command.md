@@ -216,7 +216,7 @@ loop:
     String command = Prompt.inputString("명령> ");
 
     switch (command) {
-			case "/board/add": boardAddCommand.execute(); break;
+      case "/board/add": boardAddCommand.execute(); break;
       case "/board/list": boardListCommand.execute(); break;
       case "/board/detail": boardDetailCommand.execute(); break;
       case "/board/update": boardUpdateCommand.execute(); break;
@@ -274,7 +274,7 @@ loop:
 `App.java`
 
 ```java
-	// 커맨드 객체를 저장할 맵 객체를 준비한다.
+  // 커맨드 객체를 저장할 맵 객체를 준비한다.
   Map<String, Command> commandMap = new HashMap<>();
 
   // 맵 객체에 커맨드 객체를 보관한다.
@@ -301,6 +301,6 @@ loop:
           } else {
             System.out.println("실행할 수 없는 명령입니다.");
           }
-		}
+	  }
   }
 ```
