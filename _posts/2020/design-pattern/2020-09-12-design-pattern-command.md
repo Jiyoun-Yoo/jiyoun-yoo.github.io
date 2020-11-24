@@ -112,6 +112,7 @@ loop:
         break loop;
       default:
         System.out.println("실행할 수 없는 명령입니다.");
+		}
 ```
 
 ### 1단계 - Command 인터페이스를 적용한다.
@@ -215,18 +216,19 @@ loop:
     String command = Prompt.inputString("명령> ");
 
     switch (command) {
-      	case "/board/add": boardAddCommand.execute(); break;
-        case "/board/list": boardListCommand.execute(); break;
-        case "/board/detail": boardDetailCommand.execute(); break;
-        case "/board/update": boardUpdateCommand.execute(); break;
-        case "/board/delete": boardDeleteCommand.execute(); break;
+			case "/board/add": boardAddCommand.execute(); break;
+      case "/board/list": boardListCommand.execute(); break;
+      case "/board/detail": boardDetailCommand.execute(); break;
+      case "/board/update": boardUpdateCommand.execute(); break;
+      case "/board/delete": boardDeleteCommand.execute(); break;
 
-        case "quit":
-        case "exit":
-          System.out.println("안녕!");
-          break loop;
-        default:
-          System.out.println("실행할 수 없는 명령입니다.");
+      case "quit":
+      case "exit":
+        System.out.println("안녕!");
+        break loop;
+      default:
+        System.out.println("실행할 수 없는 명령입니다.");
+		}
 ```
 
 ### 4단계 - `/hello` 명령을 추가한다.
@@ -249,12 +251,12 @@ loop:
     String command = Prompt.inputString("명령> ");
 
     switch (command) {
-      	case "/board/add": boardAddCommand.execute(); break;
+				case "/board/add": boardAddCommand.execute(); break;
         case "/board/list": boardListCommand.execute(); break;
         case "/board/detail": boardDetailCommand.execute(); break;
         case "/board/update": boardUpdateCommand.execute(); break;
         case "/board/delete": boardDeleteCommand.execute(); break;
-        case "/hello": helloCommand.execute(); break;
+				case "/hello": helloCommand.execute(); break;
 
         case "quit":
         case "exit":
@@ -262,4 +264,43 @@ loop:
           break loop;
         default:
           System.out.println("실행할 수 없는 명령입니다.");
+```
+
+### 5단계 - `HashMap`을 이용하여 커맨드 객체를 관리한다.
+
+- 낱개의 레퍼런스로 커맨드 객체를 관리하던 방식을 `Map`을 이용하여 관리한다.
+- 명령어를 처리할 때는 `Map`에서 커맨드 객체를 찾아 실행한다.
+
+`App.java`
+
+```java
+	// 커맨드 객체를 저장할 맵 객체를 준비한다.
+  Map<String, Command> commandMap = new HashMap<>();
+
+  // 맵 객체에 커맨드 객체를 보관한다.
+  List<Board> boardList = new ArrayList<>();
+  commandMap.put("/board/add", new BoardAddCommand(boardList));
+  commandMap.put("/board/list", new BoardListCommand(boardList));
+  commandMap.put("/board/detail", new BoardDetailCommand(boardList));
+  commandMap.put("/board/update", new BoardUpdateCommand(boardList));
+  commandMap.put("/board/Delete", new BoardDeleteCommand(boardList));
+
+loop:
+  while (true) {
+    String inputStr = Prompt.inputString("명령> ");
+
+    switch (inputStr) {
+      case "quit":
+      case "exit":
+        System.out.println("안녕!");
+        break loop;
+      default:
+        Command command = commandMap.get(inputStr);
+          if (command != null) {
+            command.execute();
+          } else {
+            System.out.println("실행할 수 없는 명령입니다.");
+          }
+		}
+  }
 ```
