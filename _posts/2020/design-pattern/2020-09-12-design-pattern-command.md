@@ -228,7 +228,7 @@ loop:
         break loop;
       default:
         System.out.println("실행할 수 없는 명령입니다.");
-		}
+	  }
 ```
 
 ### 4단계 - `/hello` 명령을 추가한다.
@@ -251,12 +251,12 @@ loop:
     String command = Prompt.inputString("명령> ");
 
     switch (command) {
-				case "/board/add": boardAddCommand.execute(); break;
+      	case "/board/add": boardAddCommand.execute(); break;
         case "/board/list": boardListCommand.execute(); break;
         case "/board/detail": boardDetailCommand.execute(); break;
         case "/board/update": boardUpdateCommand.execute(); break;
         case "/board/delete": boardDeleteCommand.execute(); break;
-				case "/hello": helloCommand.execute(); break;
+        case "/hello": helloCommand.execute(); break;
 
         case "quit":
         case "exit":
@@ -264,6 +264,7 @@ loop:
           break loop;
         default:
           System.out.println("실행할 수 없는 명령입니다.");
+    }
 ```
 
 ### 5단계 - `HashMap`을 이용하여 커맨드 객체를 관리한다.
@@ -301,6 +302,6 @@ loop:
           } else {
             System.out.println("실행할 수 없는 명령입니다.");
           }
-	  }
+    }
   }
 ```
