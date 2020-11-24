@@ -112,7 +112,8 @@ loop:
         break loop;
       default:
         System.out.println("실행할 수 없는 명령입니다.");
-		}
+    }
+  }
 ```
 
 ### 1단계 - Command 인터페이스를 적용한다.
@@ -228,7 +229,8 @@ loop:
         break loop;
       default:
         System.out.println("실행할 수 없는 명령입니다.");
-	  }
+    }
+  }
 ```
 
 ### 4단계 - `/hello` 명령을 추가한다.
@@ -265,6 +267,7 @@ loop:
         default:
           System.out.println("실행할 수 없는 명령입니다.");
     }
+  }
 ```
 
 ### 5단계 - `HashMap`을 이용하여 커맨드 객체를 관리한다.
