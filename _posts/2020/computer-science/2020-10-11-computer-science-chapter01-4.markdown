@@ -1,32 +1,16 @@
 ---
 title: '컴퓨터개론 1장 4절: 컴퓨터의 종류'
-layout: single
-author_profile: true
-read_time: true
-comments: true
-share: true
-related: true
 categories:
 - Computer-Science
 tag:
 - computer-science
-toc: true
-toc_sticky: true
-toc_label: Contents
 description: 숭실대학교 글로벌미디어학부 정기철 교수님의 컴퓨터 개론 수업을 듣고 정리했습니다.
-article_tag1: 1. 슈퍼 컴퓨터(Super Computer)
-article_tag2: 2. 대형 컴퓨터(Mainframe)
-article_tag3: 3. 워크스테이션(Workstation)
-article_tag4: 4. 개인용 컴퓨터 (PC, Personal Computer)
-article_tag5: 5. 휴대용 컴퓨터 (Portable Computer)
-article_tag6: 6. 임베디드 컴퓨터
-article_section: 컴퓨터 개론
-meta_keywords: 컴퓨터 개론, computer-science
 last_modified_at: '2020-10-11 23:00:00 +0800'
 ---
 
 숭실대학교 글로벌미디어학부 정기철 교수님의 컴퓨터 개론 수업을 듣고 정리했습니다.
 
+---
 # 1. 슈퍼 컴퓨터(Super Computer)
 - **슈퍼 컴퓨터** : 고속도, 고용량의 컴퓨터로, 기상 해석, 항공기 또는 핵융합로 시뮬레이션, 우주탐사, 신약 개발 등 대량의 데이터를 고속 처리하기 위한 목적으로 사용
 - 성능 단위 :  플롭스 (FLOPS, Floating-point Operations per Second);

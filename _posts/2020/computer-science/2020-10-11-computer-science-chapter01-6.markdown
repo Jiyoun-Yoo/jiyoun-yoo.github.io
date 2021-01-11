@@ -1,34 +1,16 @@
 ---
 title: '컴퓨터개론 1장 6절: 미래 컴퓨팅 기술'
-layout: single
-author_profile: true
-read_time: true
-comments: true
-share: true
-related: true
 categories:
 - Computer-Science
 tag:
 - computer-science
-toc: true
-toc_sticky: true
-toc_label: Contents
 description: 숭실대학교 글로벌미디어학부 정기철 교수님의 컴퓨터 개론 수업을 듣고 정리했습니다.
-article_tag1: 1. 클라우드 컴퓨팅
-article_tag2: 2. 사물 인터넷
-article_tag3: 3. 인공지능
-article_tag4: 4. 로봇
-article_tag5: 5. 드론
-article_tag6: 6. 자율주행 자동차
-article_tag7: 7. 가상, 증강 현실
-article_tag8: 8. 가상, 증강 현실
-article_section: 컴퓨터 개론
-meta_keywords: 컴퓨터 개론, computer-science
 last_modified_at: '2020-10-11 23:00:00 +0800'
 ---
 
 숭실대학교 글로벌미디어학부 정기철 교수님의 컴퓨터 개론 수업을 듣고 정리했습니다.
 
+---
 # 1. 클라우드 컴퓨팅
 
 ## 클라우드 컴퓨팅(Cloud Computing)

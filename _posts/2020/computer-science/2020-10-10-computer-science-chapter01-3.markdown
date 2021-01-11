@@ -1,31 +1,16 @@
 ---
 title: '컴퓨터개론 1장 3절: 컴퓨터의 역사'
-layout: single
-author_profile: true
-read_time: true
-comments: true
-share: true
-related: true
 categories:
 - Computer-Science
 tag:
 - computer-science
-toc: true
-toc_sticky: true
-toc_label: Contents
 description: 숭실대학교 글로벌미디어학부 정기철 교수님의 컴퓨터 개론 수업을 듣고 정리했습니다.
-article_tag1: 1. 기계식 계산기의 변천사
-article_tag2: 2. 전자식 컴퓨터의 시초
-article_tag3: 3. 개인용 컴퓨터 등장
-article_tag4: 4. 인터넷 시대의 도래
-article_tag5: 5. 모바일 컴퓨팅 시대
-article_section: 컴퓨터 개론
-meta_keywords: 컴퓨터 개론, computer-science
 last_modified_at: '2020-10-10 23:00:00 +0800'
 ---
 
 숭실대학교 글로벌미디어학부 정기철 교수님의 컴퓨터 개론 수업을 듣고 정리했습니다.
 
+---
 # 1. 기계식 계산기의 변천사
 
 ## 신체 활용

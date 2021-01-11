@@ -1,27 +1,16 @@
 ---
 title: '컴퓨터 개론 2장 2절: 데이터의 표현1-정수 표현 방법'
-layout: single
-author_profile: true
-read_time: true
-comments: true
-share: true
-related: true
 categories:
 - Computer-Science
 tag:
 - computer-science
-toc: true
-toc_sticky: true
-toc_label: Contents
 description: 숭실대학교 글로벌미디어학부 정기철 교수님의 컴퓨터 개론 수업을 듣고 정리했습니다.
-article_tag1: 1. 정수의 표현
-article_section: 컴퓨터 개론
-meta_keywords: 컴퓨터 개론, computer-science
 last_modified_at: '2020-10-20 23:00:00 +0800'
 ---
 
 숭실대학교 글로벌미디어학부 정기철 교수님의 컴퓨터 개론 수업을 듣고 정리했습니다.
 
+---
 # 1. 정수의 표현
 
 ## 정수(Integer)

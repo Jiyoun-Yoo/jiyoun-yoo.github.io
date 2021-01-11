@@ -1,29 +1,16 @@
 ---
 title: '컴퓨터 개론 2장 1절: 수의 체계와 변환(2진수)'
-layout: single
-author_profile: true
-read_time: true
-comments: true
-share: true
-related: true
 categories:
 - Computer-Science
 tag:
 - computer-science
-toc: true
-toc_sticky: true
-toc_label: Contents
 description: 숭실대학교 글로벌미디어학부 정기철 교수님의 컴퓨터 개론 수업을 듣고 정리했습니다.
-article_tag1: 1. 진법의 개념
-article_tag2: 2. 10진법과 2진법
-article_tag3: 3. 진법의 변환
-article_section: 컴퓨터 개론
-meta_keywords: 컴퓨터 개론, computer-science
 last_modified_at: '2020-10-12 23:00:00 +0800'
 ---
 
 숭실대학교 글로벌미디어학부 정기철 교수님의 컴퓨터 개론 수업을 듣고 정리했습니다.
 
+---
 # 1. 진법의 개념
 - 고대 이집트의 숫자 표현 방법 (진법의 개념이 없을 때)
 
