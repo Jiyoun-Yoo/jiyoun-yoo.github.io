@@ -1,5 +1,5 @@
 ---
-title: '모두의 네트워크 1장 네트워크 첫걸음'
+title: '[모두의 네트워크] 1장 네트워크 첫걸음'
 layout: single
 author_profile: true
 read_time: true
@@ -9,16 +9,11 @@ related: true
 categories:
 - Network
 tag:
-- network-for-everyone
+- network-for-everyone, 모두의 네트워크
 toc: true
 toc_sticky: true
 toc_label: Contents
 description: 모두의 네트워크(길벗 출판사) 교재로 학습한 내용을 정리했습니다.
-article_tag1: LESSON 01 네트워크의 구조
-article_tag2: LESSON 02 정보의 양을 나타내는 단위
-article_tag3: LESSON 03 랜과 왠
-article_tag4: LESSON 04 가정에서 하는 랜 구성
-article_tag5: LESSON 05 회사에서 하는 랜 구성
 article_section: 네트워크
 meta_keywords: 모두의 네트워크, network-basic
 last_modified_at: '2020-10-01 22:00:00 +0800'
