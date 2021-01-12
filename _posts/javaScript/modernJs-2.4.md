@@ -1,5 +1,5 @@
 ---
-title: '[코어 자바스크립트] 2.3 엄격 모드'
+title: '[코어 자바스크립트] 2.4 변수와 상수'
 categories:
 - javaScript
 tag:
