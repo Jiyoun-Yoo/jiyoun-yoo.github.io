@@ -1,0 +1,1643 @@
+---
+title: '02. 기본 자료구조'
+categories:
+- java
+tag:
+- [java, algorithm]
+last_modified_at: '2021-01-19 22:00:00 +0800'
+---
+
+출처 : [Do it! 자료구조와 함께 배우는 알고리즘](http://www.easyspub.co.kr/20_Menu/BookView/B001/299/PUB)
+
+---
+
+# 02-1 배열
+
+## (1) 자료구조
+
+> 자료구조란? 데이터 단위와 데이터 자체 사이의 물리적 또는 논리적인 관계
+
+- 데이터 단위는 데이터를 구성하는 한 덩어리라고 생각하면 된다.
+- 자료구조는 쉽게 말해 자료를 효율적으로 이용할 수 있도록 컴퓨터에 저장하는 방법을 말한다.
+
+## (2) 배열
+
+> 배열은 같은 자료형의 변수로 이루어징 구성요소(component)가 모인 것이다.
+
+- 배열은 같은 형의 구성 요소가 직선 모양으로 연속하여 줄지어 있는 단순한 자료구조이다.
+- 배열 요소의 자료형은 `int`형이나 `double`형 등 어떤 형이든 상관 없다.
+
+```java
+int[] a; // a는 자료형이 int형인 배열: 형식 A
+int a[]; // a는 자료형이 int형인 배열 : 형식 B
+```
+
+- 구성 요소의 자료형이 `int`형이고, 구성 요소의 개수가 5개인 배열은 아래와 같이 선언한다.
+
+```java
+	a = new int[5]; // a는 길이가 5인 배열을 참조한다.
+```
+
+- 위 선언의 의미는 `int`형의 배열 본체를 생성하고 그것을 변수 `a`가 "참조"하도록 설정한다는 것이다.
+- `new` 연산자가 생성하는 것은 배열 본체에 대한 참조이다. 참조하는 곳이 `a`에 대입되고 그 결과 배열 변수 `a`가 배열 본체를 참조하게 된다.
+- 배열 `a`의 각 요소의 자료형은 `int`형이고 배열 `a`의 자료형은 `int[5]`형이다.
+- 배열 `a`는 구성 요소의 자료형이 `int`형이고 구성 요솟수가 `5`인 배열이다. 배열의 변수 선언과 본체 생성을 한꺼번에 수행하고 있다.
+
+```java
+int[] a; // 선언하기
+a = new int[5]; // 참조하기
+```
+
+### 구성 요소
+
+- 배열 안의 모든 구성 요소의 형은 같고 직선 모양으로 줄지어 있다.
+- 배열의 개별 요소에 접근하기 위해 사용하는 것이 연산자 `[]` 안에 넣는 정수형 인덱스이다. 첫 번째 배열 요소의 인덱스는 `0`으로 정해져 있다.
+
+```java
+	a = new int[5];
+```
+
+- 표현식 `a[i]`는 배열 `a`에서 처음부터 `i`개 뒤의 구성 요소에 접근한다. 각 구성 요소에 접근하는 식은 처음부터 `a[0]`, `a[1]`, `a[2]`, `a[3]`, `a[4]`이다.
+- 배열 `a`의 모든 구성 요소는 `int`형이고 각각의 요소는 배열로 선언한 것이 아닌, 단일로 선언한 `int`형 변수와 성질이 같다.
+
+### 구성 요솟수(길이)
+
+- 배열 본체와 함께 구성 요소의 개수인 구성 요솟수를 나타내는 `length`라는 변수가 만들어진다.
+- 배열의 구성 요솟수는 배열의 길이(`length`)라고도 한다.
+
+```java
+배열 변수이름.length // 배열의 구성 요솟수
+```
+
+- 배열 `a`의 구성 요솟수는 `5`이다.
+
+### 기본값
+
+- 배열의 구성 요소는 자동으로 `0`으로 초기화되는 규칙이 있다.
+- 구성 요소를 초기화하는 값, 곧 배열을 생성할 때 각 구성 요소에 넣어지는 값을 초깃값(default value)이라 한다.
+
+| 형 | 초깃값 |
+|----|----|
+| byte | (byte)0 |
+| short | (short)0 |
+| int | 0 |
+| long | 0L |
+| float | 0.0f |
+| double | 0.0d |
+| char | '\u0000' |
+| boolean | false |
+| 참조형 | 공백 참조 또는 null|
+
+- 일반적으로 구성 요소의 자료형이 Type인 배열을 'Type형 배열'이라고 부른다. 만약 구성 요소의 자료형이 double형이면 'double형 배열'이다.
+
+```java
+double[] x = new double[7]; // 구성 요솟수가 7인 double형 배열
+```
+
+- 배열의 구성 요소와 클래스의 필드는 초깃값으로 초기화된다. 그러나 메서드 안에서 선언한 지역 변수는 초깃값으로 초기화되지 않는다. 즉 변수를 만들어도 초기화는 수행되지 않는다.
+
+```java
+int a;
+System.out.println(a); // 컴파일 오류!
+```
+
+### 배열의 요솟값을 초기화하여 배열 선언하기
+
+- 배열 본체는 배열 초기화(array initializer)를 사용하면 배열 본체의 생성과 동시에 각 요소의 초기화가 가능하다.
+
+```java
+int[] a = int[]{1, 2, 3, 4, 5};
+```
+
+- 배열 각 요소의 초긱값을 맨 앞부터 순서대로 쉼표(`,`)로 구분하여 줄지어 놓고 `{}`로 둘러싼다. 이렇게 하면 배열 `a`의 요소 `a[0]`, `a[1]`, `a[2]`, `a[3]`, `a[4]`는 각각 처음부터 순서대로 `1`, `2`, `3`, `4`, `5`로 초기화된다.
+- new 연산자를 사용하면 좀더 명확하게 선언할 수 있다.
+
+```java
+int[] a = new int[]{1, 2, 3, 4, 5};
+```
+
+### 배열의 복제(클론)
+
+- 배열의 복제는 `clone`메서드를 호출하여 쉽게 만들 수 있다.
+- 이 수식은 배열을 복제하고 복제한 배열에 대한 참조를 생성한다.
+
+```java
+배열 이름.clone(); // 배열의 복제
+```
+
+## (3) 배열 요소의 최댓값 구하기
+
+- 배열 `a`의 요소가 3개일 때 세 요소 `a[0]`, `a[1]`, `a[2]` 중 최댓값은 아래 프로그램처럼 구할 수 있다.
+
+```java
+max = a[0];
+// 요소 개수가 3이면 if문을 2개 작성한다.
+if (a[1] > max) {
+	max = a[1]
+}
+if (a[2] > max) {
+	max = a[2]
+}
+```
+
+- 먼저 배열의 요소 개수와 관계없이 첫 번째 요소 `a[0]`을 `max`에 대입한다. 그런 다음 `if`문을 실행하는 과정에서 필요에 따라 `max` 값을 새로 대입한다. 요소 개수가 `n`이면 `if`문 실행은 `n-1`번 필요하다. 이때 `max`와 비교하고 `max`에 대입하는 요소의 인덱스는 `1`씩 증가한다.
+    - `if`문의 제어식 `a[i] > max`가 참일 때(살펴보고 있는 요소 `a[i]`의 값이 최댓값 `max`보다 클 때 `a[i]` 값을 `max`에 대입한다. 겨로가적으로 배열의 모든 요소에 대해 스캔을 완료한 시점의 배열 `a`의 최대 요솟값은 `max`에 대입된다.
+
+```java
+max = a[0];
+for (int i = 1; i < n; i++) {
+	// 요소 개수가 n이면 if문을 (n-1)개 작성한다. 
+	if (a[i] > max) {
+		max = a[i];
+	}
+}
+```
+
+- 이처럼 배열의 요소를 하나씩 차례로 살펴보는 과정을 알고리즘 용어로 **주사(traverse)**라고 한다.
+- **주사**는 쉽게 말해 **스캐닝(scanning)**을 의미하는데, 데이터를 하나씩 살피고 조사하는 일을 말한다. 영어로 **traverse**라고 하는데, 이는 **가로지르다, 횡단하다**라는 뜻이다.
+
+### 배열 요소의 최댓값을 구하는 메서드
+
+- 배열 `height`의 요소가 나타내는 것은 사람의 '키'이다. 배열의 요소를 구하는 절차는 별도의 메서드 `maxOf`로 구현하고 있다. 이 메서드는 인수로 받은 배열 `a`의 최댓값을 구하고 그 값을 반환한다.
+
+```java
+package chapter02;
+
+import java.util.Scanner;
+
+public class ex01 {
+  public static void main(String[] args) {
+    Scanner stdIn = new Scanner(System.in);
+
+    System.out.println("키의 최댓값 구하기");
+    System.out.print("사람 수 : ");
+    int no = stdIn.nextInt(); // 사용자가 배열의 크기 결정
+
+    int[] height = new int[no]; // 배열 생성
+
+    for (int i = 0; i < no; i++) {
+      System.out.printf("height[%d] : ", i);
+      height[i] = stdIn.nextInt();
+    }
+
+    System.out.printf("최댓값은 %d입니다.", maxOf(height));
+  }
+
+  static int maxOf(int[] a) {
+    int max = a[0];
+    for (int i = 1; i < a.length; i++) {
+      if (a[i] > max) {
+        max = a[i];
+      }
+    }
+    return max;
+  }
+
+}
+```
+
+- `main` 메서드에서는 가장 먼저 사람 수를 변수 `no`에 읽어 들이고, 요솟수가 `no`인 배열 `height`를 생성한다. 그리고 각 요소에 값을 읽어 들인 후 배열 `height`를 메서드 `maxOf`에 전달하고 메서드가 반환한 최댓값을 나타낸다.
+- `maxOf(height)`는 배열 `height` 요소의 최댓값을 구하기 위해 메서드 `maxOf`를 호출하는 것이다. 이때 메서드의 매개변수로 배열을 전달하고 있는데, 사실 인수 `height`는 배열 본체를 참조하는 배열 변수이다. 따라서 메서드 `maxOf`에 전달하는 것은 '**배열 본체에 대한 참조**'이다. 호출한 메서드 `maxOf`는 배열 변수인 매개변수 `a`가 전달받은 참조로 초기화되므로 배열 변수 `a`는 배열 `height`의 본체를 참조한다. 그 결과 메서드 `maxOf` 안의 배열 `a`는 사실상 `main` 메서드의 배열 `height`인 것이다. 이런 원리로 배열을 전달하므로 메서드 `maxOf`안에서는 전달받은 배열의 요솟수를 `a.length`로 얻을 수 있고, 각 요소를 `a[i]`로 액세스할 수 있다.
+
+### 난수 사용해 배열의 요솟값 설정하기
+
+- 배열의 요소에 값을 하나씩 입력하는 것이 귀찮을 경우 각 요소에 난수를 대입하면 된다.
+
+```java
+package chapter02;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class ex02 {
+  public static void main(String[] args) {
+    Random rand = new Random();
+    Scanner stdIn = new Scanner(System.in);
+
+    System.out.println("키의 최댓값 구하기");
+    System.out.print("사람 수 : ");
+    int no = stdIn.nextInt();
+
+    int[] height = new int[no];
+
+    System.out.println("키 값은 아래와 같습니다.");
+    for (int i = 0; i < no; i++) {
+      height[i] = 100 + rand.nextInt(90); // 요소의 값을 난수로 결정
+      System.out.printf("height[%d] : %d\n", i, height[i]);
+    }
+
+    System.out.printf("최댓값은 %d입니다.", maxOf(height));
+  }
+
+  static int maxOf(int[] a) {
+    int max = a[0];
+    for (int i = 1; i < a.length; i++) {
+      if (a[i] > max) {
+        max = a[i];
+      }
+    }
+    return max;
+  }
+
+}
+```
+
+- 사람 수를 입력하면 곧바로 그 사람 수만큼 키의 값이 자동으로 생성되고 최댓값이 출력된다.
+- 난수를 생성할 때는 `java.util` 패키지의 `Random` 클래스를 사용한다.
+
+```
+1) Random 클래스를 간단한 이름으로 사용하기 위해 형 import 선언을 한다.
+2) Random 클래스형의 변수(이 프로그램에서는 rnad)를 만들기 위한 선언을 한다.
+3) 변수 rand에 대한 난수를 생성하는 메서드 nextInt를 호출한다. 난수가 필요할 때마다 3)을 실행한다.
+```
+
+- `nextInt(n)`가 반환하는 것은 `0`부터 `n-1`까지의 난수이다.
+
+### 연습 문제
+
+- Q1) 키뿐만 아니라 사람 수도 난수로 생성하도록 `ex01`를 수정하여 프로그램을 작성하세요.
+
+```java
+package chapter02;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class quiz01 {
+  public static void main(String[] args) {
+    Random rand = new Random();
+    Scanner stdIn = new Scanner(System.in);
+
+    System.out.println("키의 최댓값 구하기");
+    int no = rand.nextInt(10);
+    System.out.printf("사람 수 : %d명\n", no);
+
+    int[] height = new int[no];
+
+    System.out.println("키 값은 아래와 같습니다.");
+    for (int i = 0; i < no; i++) {
+      height[i] = 100 + rand.nextInt(90); // 요소의 값을 난수로 결정
+      System.out.printf("height[%d] : %d\n", i, height[i]);
+    }
+
+    System.out.printf("최댓값은 %d입니다.", maxOf(height));
+  }
+
+  static int maxOf(int[] a) {
+    int max = a[0];
+    for (int i = 1; i < a.length; i++) {
+      if (a[i] > max) {
+        max = a[i];
+      }
+    }
+    return max;
+  }
+
+}
+```
+
+```
+키의 최댓값 구하기
+사람 수 : 6명
+키 값은 아래와 같습니다.
+height[0] : 137
+height[1] : 141
+height[2] : 103
+height[3] : 155
+height[4] : 140
+height[5] : 175
+최댓값은 175입니다.
+```
+
+### 난수의 생성
+
+- `java.util` 패키지에 속한 `Random` 클래스의 인스턴스는 일력의 의사 난수를 생성한다. 난수는 무에서 생성되는 것이 아니라 '**seed(씨앗)**'이라는 수의 값을 바탕으로 여러 연산을 수행하여 얻는다. `Random` 클래스에서는 48비트의 seed를 사용하고, 이 seed는 **선형 합동법**이라는 계산법에 의해 특정 수(난수)로 바뀐다.
+- `Random` 클래스의 인스턴스 생성은 아래 두 가지 중 한 가지 형식으로 수행한다.
+
+```java
+Random rand = new Random(); // seed 값 자동 결정
+Random rand = new Random(n); // 개발자가 seed 설정 
+```
+
+- 난수를 생성하는 `Random` 클래스의 메서드
+
+|구하는 식|자료형|생성한 값의 범위|
+|------|------|------|
+|nextBoolean()|boolean|true 또는 false|
+|nextInt()|int|-2147483648 ~ +2147483647|
+|nextInt(n)|int|0 ~ n-1|
+|nextLong()|long|-9223372036854775808 ~ +9223372036854775807|
+|nextDouble()|double|0.0 이상 1.0 미만|
+|nextFloat()|float|0.0 이상 1.0 미만|
+
+  
+- **의사 난수란?**
+
+  - 컴퓨터 과학에서 난수는 보통 특정 입력값이나 컴퓨터 환경에 따라 무작위로 선택한 것처럼 보이는 난수를 생성한다. `seed`의 값과 컴퓨터 환경이 같다면 그 결과값은 항상 같다. 결국 컴퓨터에 의해 생성된 모든 난수는 미리 컴퓨터가 계산해 둔 의사 난수이다.
+  - 프로그램에서 매번 같은 방법으로 난수를 가져오면 처음 실행할 때 이외에는 난수라고 할 수 없다. 그래서 보통 `seed`라 불리는 수를 `srand` 메서드에 매개변수로 매번 다르게 전달해 항상 다른 의사 난수를 생성해야 한다. 이때 `seed`의 값을 항상 다르게 주기 위해 현재 시간을 이용하는 것이 일반적이다. 현재 시간은 매 순간 바뀌므로 이전에 발생한 의사 난수를 다시 생성하지는 않는다.
+
+## (4) 배열 요소를 역순으로 정리하기
+
+- 요소 개수가 `n`인 배열 요소를 역순으로 정렬하는 알고리즘을 간단히 나타내면 다음과 같다.
+
+```java
+for(int i = 0; i < n / 2; i++)
+// a[i]와 a[n-i-1]의 값을 교환
+```
+
+- 교환 횟수는 '**요소 개수/2**'이며, 이 나눗셈에서 나머지는 버린다. 요소 개수가 홀수인 경우 가운데 요소는 교환할 필요가 없기 때문이다.
+
+### 두 값의 교환
+
+- 배열의 역순 정렬은 요소 교환이 총 `n/2`회 필요하다.
+- `x`와 `y`를 교환하는데, 교환을 위해 같은 자료형을 가진 변수 `t`를 하나 더 사용한다.
+
+```java
+1) x 값을 t에 보관
+2) y 값을 x에 대입
+3) t에 보관한 처음 x 값을 y에 대입
+```
+
+- 배열 요소를 역순으로 정렬하는 과정에서 교환하는 값은 `x`와 `y`가 아니라 배열 안의 두 요소의 값이다. 교환 요소가 `a[idx1]`, `a[idx2]`라면 값의 교환은 다음과 같이 할 수 있다.
+
+```java
+t = a[idx1];
+a[idx1] = a[idx2];
+a[idx2] = t;
+```
+
+- 배열 안의 두 요소를 교환하는 것은 다른 프로그램에서도 자주 사용한다. 따라서 독립적인 메서드로 구현하면 편리하다.
+
+```java
+// 배열 요소 a[idx1]과 a[idx2]의 값을 교환
+static void swap(int[] a, int idx1, int idx2) {
+	int t = a[idx1]; 
+	a[idx1] = a[idx2];
+	a[idx2] = t;
+}
+```
+
+- 메서드 `swap`의 매개변수는 `a`, `idx1`, `idx2`의 셋이다. 메서드 `swap`이 수행하는 것은 1의 요소 `a[idx1]` 값과 `a[idx2]` 값을 교환하는 것이다. 예를 들어 `swap(a, 1, 5)`를 호출하면 메서드로부터 돌아올 때 `a[1]`의 값과 `a[5]`의 값이 바뀌어 있다.
+
+### 요소를 역순으로 정렬
+
+- 메서드 `reverse`는 매개변수로 전달받은 배열 `a`의 요소를 역순으로 정렬한다.
+
+```java
+package chapter02;
+
+import java.util.Scanner;
+
+public class ex03 {
+  public static void main(String[] args) {
+    Scanner stdIn = new Scanner(System.in);
+
+    System.out.print("요솟 수 : ");
+    int no = stdIn.nextInt();
+
+    int[] x = new int[no];
+
+    for (int i = 0; i < no; i++) {
+      System.out.printf("x[%d] : ", i);
+      x[i] = stdIn.nextInt();
+    }
+
+    reverse(x); // 요소를 역순으로 정렬
+
+    System.out.println("요소를 역순으로 정렬합니다.");
+    for (int i = 0; i < no; i++) {
+      System.out.printf("x[%d] : %d\n", i, x[i]);
+    }
+
+  }
+
+  static void swap(int[] a, int idx1, int idx2) {
+    int t = a[idx1];
+    a[idx1] = a[idx2];
+    a[idx2] = t;
+  }
+
+  static void reverse(int[] a) {
+    for (int i = 0; i < a.length / 2; i++) {
+      swap(a, i, a.length - i - 1);
+    }
+  }
+
+}
+```
+
+### 연습 문제
+
+- Q2) 배열 요소를 역순으로 정렬하는 과정을 하나하나 나타내는 프로그램을 작성하세요.
+
+```java
+package chapter02;
+
+import java.util.Scanner;
+
+// 나의 풀이
+public class quiz02 {
+  public static void main(String[] args) {
+    Scanner stdIn = new Scanner(System.in);
+
+    System.out.print("요솟 수 : ");
+    int no = stdIn.nextInt();
+
+    int[] x = new int[no];
+
+    for (int i = 0; i < no; i++) {
+      System.out.printf("x[%d] : ", i);
+      x[i] = stdIn.nextInt();
+    }
+
+    reverse(x); // 요소를 역순으로 정렬
+
+    for (int i = 0; i < no; i++) {
+      System.out.print(x[i] + " ");
+    }
+    System.out.println("\n역순 정렬을 완료했습니다.");
+
+  }
+
+  static void swap(int[] a, int idx1, int idx2) {
+    int t = a[idx1];
+    a[idx1] = a[idx2];
+    a[idx2] = t;
+    for (int i = 0; i < a.length; i++) {
+      System.out.print(a[i] + " ");
+    }
+    System.out.printf("\na[%d]와 a[%d]를 교환합니다.\n", idx1, idx2);
+  }
+
+  static void reverse(int[] a) {
+    for (int i = 0; i < a.length / 2; i++) {
+      swap(a, i, a.length - i - 1);
+    }
+  }
+
+}
+```
+
+```java
+// 해설
+class ReverseArrayEx_02_02 {
+	// 배열의 요소 a[idx1]와 a[idx2]를 교환
+	static void swap(int[] a, int idx1, int idx2) {
+		int t = a[idx1];
+		a[idx1] = a[idx2];
+		a[idx2] = t;
+	}
+
+	// 배열 a의 요소 값을 나타냄
+	static void print(int[] a) {
+		for (int i = 0; i < a.length; i++)
+			System.out.print(a[i] + " ");
+		System.out.println();
+	}
+
+	// 배열 a의 요소를 역순으로 정렬
+	static void reverse(int[] a) {
+		print(a);
+		for (int i = 0; i < a.length / 2; i++) {
+			System.out.println("a[" + i + "]와 a[" + (a.length - i - 1) + "]를 교환합니다.");
+			swap(a, i, a.length - i - 1);
+			print(a);
+		}
+	}
+
+	public static void main(String[] args) {
+		Scanner stdIn = new Scanner(System.in);
+
+		System.out.print("요솟수는 ：");
+		int num = stdIn.nextInt(); // 요솟수
+
+		int[] x = new int[num]; // 요솟수 num인 배열
+
+		for (int i = 0; i < num; i++) {
+			System.out.print("x[" + i + "] : ");
+			x[i] = stdIn.nextInt();
+		}
+
+		reverse(x); // 배열 a의 요소를 역순으로 정렬
+
+		System.out.println("역순 정렬을 마쳤습니다.");
+//		for (int i = 0; i < num; i++)
+//			System.out.println("x[" + i + "] = " + x[i]);
+	}
+}
+```
+
+- Q3) 배열 `a`의 모든 요소의 합계를 구하여 반환하는 메서드를 작성하세요.
+
+```java
+static int sumOf(int[] a) {
+  int sum = 0;
+  for (int i = 0; i < a.length; i++) {
+    sum += a[i];
+  }
+  return sum;
+}
+```
+
+## (5) 두 배열의 비교
+
+- 두 배열의 모든 요소의 값이 같은가"를 판단하는 메서드를 구현한 프로그램을 작성한다.
+
+```java
+package chapter02;
+
+import java.util.Scanner;
+
+public class ex04 {
+  public static void main(String[] args) {
+    Scanner stdIn = new Scanner(System.in);
+
+    System.out.print("배열 a의 요솟 수 : ");
+    int noA = stdIn.nextInt();
+    int[] a = new int[noA];
+
+    for (int i = 0; i < noA; i++) {
+      System.out.printf("a[%d] : ", i);
+      a[i] = stdIn.nextInt();
+    }
+
+    System.out.print("배열 b의 요솟 수 : ");
+    int noB = stdIn.nextInt();
+    int[] b = new int[noB];
+
+    for (int i = 0; i < noB; i++) {
+      System.out.printf("b[%d] : ", i);
+      b[i] = stdIn.nextInt();
+    }
+
+    System.out.println("배열 a와 b는 " + (equals(a, b) ? "같습니다." : "같지 않습니다."));
+
+  }
+
+  // 두 배열 a, b의 모든 요소가 같은지 판단하는 메서드
+	// 모든 요소의 값이 같으면 true, 그렇지 않으면 false를 반환한다.
+  static boolean equals(int[] a, int[] b) {
+    if (a.length != b.length) {
+      return false;
+    }
+
+    for (int i = 0; i < a.length; i++) {
+      if (a[i] != b[i]) {
+        return false;
+      }
+    }
+
+    return true;
+  }
+
+}
+```
+
+- 위 메서드의 판단은 세 단계로 수행된다.
+    - 두 배열 `a`, `b`의 길이를 비교한다. 길이가 다르면 배열이 같지 않은 것이 분명하므로 `false`를 반환한다.
+    - 두 배열의 길이가 같으면, `for`문에서 두 배열을 처음부터 스캔하면서 요소 `a[i]`와 `b[i]`의 값을 비교하는 것을 반복한다. 그 과정에서 값이 다른 요소를 발견하면 반환문을 실행하여 `false`를 반환한다.
+    - 위의 두 과정에서 모두 `false`를 반환하지 않았다면 `for`문이 중단되지 않고 끝까지 실행되었다는 의미이다. 두 배열은 같다고 판단할 수 있으므로 `true`를 반환한다.
+
+### 연습 문제
+
+- Q4) 배열 `b`의 모든 요소를 배열 `a`에 복사하는 메서드 `copy`를 작성하세요.
+
+```java
+static void copy(int[] a, int[] b) {
+  int no = a.length <= b.length ? a.length : b.length;
+  for (int i = 0; i < no; i++) {
+    a[i] = b[i];
+  }
+}
+```
+
+- Q5) 배열 `b`의 모든 요소를 배열 `a`에 **역순으로** 복사하는 메서드 `rcopy`를 작성하세요.
+
+```java
+static void rcopy(int[] a, int[] b) {
+	int no = a.length <= b.length ? a.length : b.length;
+	for (int i = 0; i < no; i++) {
+		a[i] = b[b.length -i - 1];
+	}
+}
+
+```
+
+## (6) 기수 변환
+
+- `10`진수 정수를 `n`진수 정수로 변환하려면 정수를 `n`으로 나눈 나머지를 구하는 동시에 그 몫에 대해 나눗셈을 반복해야 한다. 이 과정을 몫이 `0`이 될 때까지 반복하고, 이런 과정으로 구한 나머지를 거꾸로 늘어 놓은 숫자가 기수로 변환한 숫자이다.
+- `16`진수는 아래 `16`개의 문자로 표현되는 수이다.
+
+```
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, A, B, C, D, E, F
+```
+
+- 기수가 `10`단위를 넘는 경우 `0` ~ `9`에 이어지는 숫자로 알파벳 문자인 `A`, `B`, ... 를 사용하고, 이 문자는 `10`진수의 `10`, `11`, ...에 해당한다.
+- `36`진수는 숫자 `0` ~ `9`와 알파벳 `A` ~ `Z`를 이용하여 나타낼 수 있다.
+
+### 기수의 의미
+
+- **기수** : 수를 나타내는 데 기초가 되는 수,
+    - `10`진법에서는 `0`에서 `9`까지의 정수
+    - 일, 이 삼 ...
+- **서수** : 사물의 순서를 나타내는 수
+    - 첫째, 둘째, 셋째 ...
+
+### 10진수
+
+- `10`진수(Decimal)는 아래 `10`종류의 숫자를 사용하여 수를 나타낸다.
+
+```
+0 1 2 3 4 5 6 7 8 9
+```
+
+- 위의 숫자를 모두 사용하면 자릿수가 한 자리 올라가 `10`이 된다. `2`자리의 숫자는 `10`에서 시작하여 `99`까지이다.
+
+```
+  1의 자리 ... 0부터 9까지의 수를 나타낸다.
+~ 2의 자리 ... 10부터 99까지의 수를 나타낸다.
+~ 3의 자리 ... 100부터 999까지의 수를 나타낸다.
+```
+
+- `10`진수의 각 자리는 아랫자리부터 `10`의 거듭제곱 값을 갖는다.  그러므로 `1234`는 아래처럼 풀어 쓸 수 있다.
+
+```
+1234 = 1 x 10^3 + 2 x 10^2 + 3 x 10^1 + 4 x 10^0
+```
+
+### 8진수
+
+- `8`진수(Octal)는 아래 `8`종류의 숫자를 사용하여 수를 나타낸다.
+
+```
+0 1 2 3 4 5 6 7 
+```
+
+- 위의 숫자를 모두 사용하면 자릿수가 한 자리 올라가 `10`이 되고, 그 다음 수는 `11`이 된다. `2`자리의 숫자는 `10`부터 시작하여 `77`까지이다.
+
+```
+  1의 자리 ... 0부터 7까지의 수를 나타낸다.
+~ 2의 자리 ... 10부터 77까지의 수를 나타낸다.
+~ 3의 자리 ... 100부터 777까지의 수를 나타낸다.
+```
+
+- `8`진수의 각 자리는 아랫자리부터 `8`의 거듭제곱 값을 갖는다. 그러므로 `8`진수 `5306`(정수 상수로는 `0536`으로 표기)은 아래처럼 풀어 쓸 수 있다.
+
+```
+5306 = 5 x 8^3 + 3 x 8^2 + 0 x 8^1 + 6 x 8^0
+```
+
+### 정수 상수의 n진수 표현 방법
+
+- 정수 상수는 정수 계열의 값을 나타내는 `10`진수(기수 `10`), `8`진수(기수 `8`) 또는 `16`진수(기수 `16`)를 말한다. 정수 상수는 변경할 수 없는 정숫값을 나타낼 때 사용한다.
+- 정수 상수가 `0x` 또는 `0X`로 시작되는 경우는 `16`진수이고, 숫자 `0`으로 시작되는 경우는 `8`진수이다. 두 경우에 해당하지 않으면 `10`진수로 간주한다.
+
+```
+0x1C // 10진수 28에 대한 16진수 표기
+034 // 10진수 28에 대한 8진수 표기
+```
+
+### 16진수
+
+- `16`진수(Hexadecimal)는 아래 `16`종류의 문자를 사용하여 수를 나타낸다.
+
+```
+0 1 2 3 4 5 6 7 8 9 A B C D E F
+```
+
+- `0` ~ `F`는 `10`진수 `0` ~ `15`에 해당하고, `A` ~ `F`는 소문자라도 상관 없다. 이 숫자를 모두 사용하면 자릿수가 한 자리 올라가 `10`이 된다. `2`자리의 숫자는 `10`부터 시작하여 `FF`까지이다. 이 `2`자리 숫자를 모두 사용하면 그 다음 수는 `100`이 된다.
+- `16`진수의 각 자리는 아랫자리부터 순서대로 `16`의 거듭제곱 값을 갖는다. 그러므로 `16`진수 `12A0`(정수 상수로는 `0x12A0`)은 아래처럼 풀어 쓸 수 있다.
+
+```
+12A0 = 1 x 16^3 + 2 x 16^2 + 10 x 16^1 + 0 x 16^0
+```
+
+### 기수 변환
+
+- 기수 변환을 수행하는 프로그램을 작성한다.
+
+```java
+package chapter02;
+
+public class ex05 {
+	// 정숫값 x를 r진수로 변환하는 메서드
+	// 배열 d에 아랫자리부터 넣어두고 자릿수 반환한다.
+  static int cardConvR(int x, int r, char[] d) {
+     int digits = 0; // 변환 후의 자릿수
+     String dchar = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+     do {
+       d[digits++] = dchar.charAt(x % r); // r로 나눈 나머지 저장
+       x /= r;
+     } while(x != 0);
+
+    return digits;
+  }
+}
+```
+
+- 메서드 `cardConvR`은 정수 `x`를 `r`진수로 변환한 값의 각 자리의 문자를 `char`형 배열 `d`에 넣어두고 그 자릿수(배열에 넣어둔 문자 수)를 반환하는 메서드이다.
+- `charAt`메서드는 문자열에서 임의의 문자열에 액세스하기 위한 `String` 클래스의 메서드이다.
+- 나머지를 구하는 순서대로 배열 `d`에 저장하므로 배열 `d`의 맨 앞쪽(`d[0]`)이 가장 마지막 자리가 된다. 즉, 변환한 후의 `d` 값은 역순으로 배치되어 있다.
+- 문자열 `dchar`는 `"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"`로 초기화되어 있으므로, 각 문자는 다음과 같이 접근할 수 있다.
+
+```java
+// 숫자 문자
+dchar.charAt(0); // 문자 '0'
+dchar.charAt(1); // 문자 '1'
+...
+
+// 알파벳
+dchar.charAt(10); // 문자 'A'
+dchar.charAt(11); // 문자 'B'
+...
+dchar.charAt(35); // 문자 'Z'
+```
+
+- 메서드 맨 앞에서 `0`으로  초기화하는 `digits`는 변환한 수의 자릿수를 나타내기 위한 변수이다. `do`문 루프 본문에서는 다음 작업을 수행한다.
+
+```java
+1) 먼저 x를 r로 나눈 나머지를 인덱스로 하는 문자를 배열 d의 요소 d[digits]에 대입하고 digits 값을 증가시킨다.
+2) x를 r로 나눈다.
+3) 작업을 x가 0이 될 때까지 반복한다.
+```
+
+- 예) `10`진수 `59`를 `16`진수로 변환하려 한다.
+    - `x`가 `59`이고 `r`이 `16`이라면 `x%r`은 `11`이다. `dchar.charAt(x%r)`가 반환하는 것은 문자 '**B**'이다.
+    - 문자 '**B**'를 `d[0]`에 저장한 후 `digits`는 `1`, `x`는 `3`이 된다. 문자 '**3**'을 `d[1]`에 저장한 후 `digits`는 `2`, `x`는 `0`이 된다.
+    - `x`가 `0`이 되면 `while`문은 반복을 끝낸다.
+- 사용자가 숫자를 입력하고, 원하는 기수로 변환을 할 수 있는 프로그램을 작성한다.
+
+```java
+package chapter02;
+
+import java.util.Scanner;
+
+public class ex06 {
+  public static void main(String[] args) {
+    Scanner stdIn = new Scanner(System.in);
+
+    int no; // 변환하는 정수
+    int cd; // 기수
+    int dno; // 변환 후의 자릿수
+    int retry; // 다시 한 번?
+    char[] cno = new char[32]; // 변환 후 각 자리의 숫자를 넣어두는 문자의 배열
+
+    System.out.println("10진수를 기수 변환합니다.");
+
+    do {
+      do {
+        System.out.print("변환하는 음이 아닌 정수 : ");
+        no = stdIn.nextInt();
+      } while (no < 0);
+
+      do {
+        System.out.print("어떤 진수로 변환할까요? (2~36) : ");
+        cd = stdIn.nextInt();
+      } while (cd < 2 || cd > 36);
+
+      dno = cardConvR(no, cd, cno); // no를 cd 진수로 변환
+
+      System.out.print(cd + "진수로는 ");
+      for (int i = dno - 1; i >= 0; i--) { // 윗자리부터 차례로 나타냄
+        System.out.print(cno[i]);
+      }
+
+      System.out.println("입니다.");
+
+      System.out.print("한 번 더 할까요? (1. 예/ 0. 아니오) : ");
+      retry = stdIn.nextInt();
+    } while(retry  == 1);
+
+  }
+
+  static int cardConvR(int x, int r, char[] d) {
+    int digits = 0; // 변환 후의 자릿수
+    String dchar = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+    do {
+      d[digits++] = dchar.charAt(x % r); // r로 나눈 나머지 저장
+      x /= r;
+    } while(x != 0);
+
+   return digits;
+ }
+
+}
+```
+
+- `main` 메서드에서는 기수 변환을 대화식으로 수행한다. 메서드 `cardConvR`에서 반환한 값이 대입되는 변수 `dno`에는 변환한 후의 자릿수가 들어 있다. 즉, 변환한 후 각 자리의 문자는 `cno[0]`, `cno[1]`, ... , `cno[dno - 1]`에 들어 있다. 그러나 메서드 `cardConvR`은 배열에 넣는 것을 역순으로 수행한다(배열의 앞쪽에 아랫자리가 들어가게 된다). 따라서 변환 결과를 나타내는 갈색 박스 부분에서는 배열 `cno`를 뒤쪽에서 앞쪽으로 역순으로 스캔한다.
+
+### 연습 문제
+
+- Q6) 배열의 앞쪽에 아랫자리가 아니라 윗자리를 넣어두는 메서드를 작성하세요.
+
+```java
+
+static int cardConv(int x, int r, char[] d) {
+  int digits = 0; // 변환 후의 자릿수
+  String dchar = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+  do {
+    d[digits++] = dchar.charAt(x % r); // r로 나눈 나머지 저장
+    x /= r;
+  } while(x != 0);
+
+  for (int i = 0; i < digits / 2; i++) {
+    char temp = d[i];
+    d[i] = d[digits - i - 1];
+    d[digits - i - 1] = temp;
+  }
+
+  return digits;
+}
+```
+
+- Q7) 기수 변환 과정을 자세히 나타내는 프로그램을 작성하세요.
+
+```java
+static int cardConvR(int x, int r, char[] d) {
+  int digits = 0;
+  String dchar = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+  do {
+    if (digits == 0) {
+      System.out.printf("%2d| %7d\n", r, x);
+      System.out.println("  +--------");
+    } else if (x /r != 0) {
+      System.out.printf("%2d| %7d ...%d\n", r, x / r, x % r);
+      System.out.println("  +--------");
+    } else {
+      System.out.printf("%11d ...%d\n", x / 2, x % r);
+    }
+
+    d[digits++] = dchar.charAt(x % r);
+
+    x /= r;
+  } while(x != 0);
+
+  for (int i = 0; i < digits / 2; i++) {
+    char temp = d[i];
+    d[i] = d[digits - i - 1];
+    d[digits - i - 1] = temp;
+  }
+
+  return digits;
+}
+```
+
+```
+10진수를 기수 변환합니다.
+변환하는 음이 아닌 정수 : 59
+어떤 진수로 변환할까요? (2~36) : 2
+ 2|      59
+  +--------
+ 2|      14 ...1
+  +--------
+ 2|       7 ...0
+  +--------
+ 2|       3 ...1
+  +--------
+ 2|       1 ...1
+  +--------
+          0 ...1
+2진수로는 110111입니다.
+```
+
+### String 클래스
+
+- `String` 클래스는 `java.lang` 패키지에 소속된 문자열을 나타내는 클래스이다. 이 형은 기본형이 아니다.
+
+```java
+String s = "ABC";
+```
+
+- "ABC"는 문자열 리터럴이다. 문자열 리터럴은 단순히 문자가 늘어서 있는 것이 아니라 `String`형 인스턴스에 대한 참조이다. `String` 클래스는 문자열을 넣어두기 위한 문자 배열, 문자 수를 나타내는 필드 등을 갖고 있는 클래스이다.
+    - 문자 배열(`private final char[]`)의 요소에는 앞쪽부터 순서대로 문자 `'A'`, `'B'`, `'C'`가 들어 있다.
+    - 문자 수(`private final int`) 필드에는 `3`이 들어 있다.
+- `String` 클래스에는 이외에도 필드(`field`), 생성자(`constructor`), 메서드(`method`)가 있다.
+- `String` 클래스에서 제공하는 메서드
+
+```java
+char charAt(int i) // 인덱스가 i인 곳의 문자를 가져온다.
+int length() // 문자열의 문자 수를 가져온다.
+boolean equals(String s) // 문자열 s와 같은가를 조사한다.
+```
+
+## (7) 소수의 나열
+
+- 소수 : 자신과 `1` 이외의 정수로 나누어떨어지지 않는 정수
+    - 어떤 정수 `n`이 소수라면, `2`부터 `n-1`까지의 어떤 정수로도 나누어떨어지지 않는다.
+    - 만약 나누어 떨어지는 정수가 하나 이상 존재하면 그 수는 합성수(composite number)이다.
+- 1000 이하의 소수를 나열하는 프로그램을 작성한다.
+
+```java
+package chapter02;
+
+public class ex07 {
+  public static void main(String[] args) {
+    int counter = 0; // 나눗셈의 횟수
+
+    for (int n = 2; n <= 1000; n++) {
+      int i;
+      for (i = 2; i < n; i++) {
+        counter++;
+        if (n % i == 0) {
+          break; // 나누어떨어지면 소수가 아니다.
+        }
+      }
+
+      if (n == i) { // 끝까지 나누어떨어지지 않았다면 소수이다.
+        System.out.println(n);
+      }
+    }
+
+    System.out.println("나눗셈을 수행한 횟수 : " + counter);
+  }
+}
+```
+
+- 안쪽 `for`문의 반복이 종료된 시점에서 변수 `i`의 값은 아래와 같다
+    - `n`이 **소수**인 경우 : `n`과 같은 값 (`for`문이 끝까지 실행됨)
+    - `n`이 **합성수**인 경우 : `n`보다 작은 값 (`for`문이 중단됨)
+- `n`이 `2` 또는 `3`으로 나누어떨어지지 않으면 `2x2`인 `4` 또는 `2x3`인 `6`으로노 나누어 떨어지지 않는다. 그러므로 위의 프로그램은 불필요한 나눗셈을 하고 있다.
+
+### 알고리즘 개선(1)
+
+- 소수를 구하는 과정에서 그때까지 구한 소수를 배열 `prime`의 요소로 저장한다. 이때 `n`이 소수인지 아닌지 판단하기 위해서는 쌓아두었던 소수에서 나눗셈을 진행한다.
+
+```java
+package chapter02;
+
+public class ex08 {
+  public static void main(String[] args) {
+    int counter = 0; // 나눗셈의 횟수
+    int primeNo = 0; // 찾은 소수의 개수
+    int[] prime = new int[500]; // 소수를 저장하는 배열
+
+    prime[primeNo++] = 2; // 2는 소수이다.
+
+    for (int n = 3; n <= 1000; n += 2) { // 홀수를 대상으로 검사한다.
+      int i;
+      for (i = 1; i < primeNo; i++) { // 이미 찾은 소수로 나누어 본다.
+        counter++;
+        if (n % prime[i] == 0) {
+          break; // 나누어떨어지면 소수가 아니다.
+        }
+      }
+
+      if (primeNo == i) { // 끝까지 나누어떨어지지 않았다면 소수이다.
+        prime[primeNo++] = n;
+      }
+    }
+
+    for (int i = 0; i < primeNo; i++) {
+      System.out.println(prime[i]);
+    }
+
+    System.out.println("나눗셈을 수행한 횟수 : " + counter);
+  }
+}
+```
+
+- `2`는 소수임을 알고 있는 수이므로 `prime[0]`에 저장한다. `3` 이상의 소수는 이중 `for`문으로 구한다. `4`이상의 짝수는 `2`로 나누어떨어지므로 소수가 아니다. 따라서 바깥쪽 `for`문은 `n`의 값을 `2`씩 증가하도록 한다.
+- **3이 소수인지 판단하는 과정** : 안쪽 `for`문은 실행되지 않고 `if`문에 의해 `n`값 `3`이 `prime[1]`에 저장된다.
+- **5가 소수인지 판단하는 과정** : `prime[1]`에 저장한 `3`으로 나눗셈을 한다. `3`으로 나누어 떨어지지 않기 때문에 `n`의 값 `5`를 `prime[2]`에 저장한다.
+- **7이 소수인지 판단하는 과정** : `prime[1]`과 `prime[2]`에 저장한 숫자로 나눗셈을 한다. 소수라고 판단되므로 `n`의 값 `7`을 `prime[3]`에 저장한다.
+- **9가 소수인지 판단하는 과정** : `prime[1]`에 저장한 `3`으로 나눗셈을 한다. `3`으로 나누어떨어지므로 소수가 아닌 **합성수**라고 판단한다.
+- 이렇게 알고리즘을 수정하면 나눗셈을 수행하는 횟수가 78,022회에서 14,622회로 감소한다.
+
+> 같은 답을 얻는 알고리즘은 하나가 아니며, 빠른 알고리즘은 메모리를 많이 요구한다.
+
+### 알고리즘 개선(2)
+
+- `100`의 약수를 다른 방식으로 생각해보면, 넓이가 `100`인 직사각형의 가로, 세로의 길이와 같다.
+- 예를 들어 `5 x 20`과 `20 x 5`는 가로, 세로가 다르지만 같은 직사각형이라고 말할 수 있다. 직사각형의 한 변의 길이가지만 소수로 나눗셈을 시도하고, 그 과정에서 한 번도 나누어떨어지지 않으면 소수라고 판단해도 좋다는 것을 의미한다.
+- 즉, 어떤 정수 n은 다음 조건을 만족하면 소수라고 판단할 수 있다.
+    - n의 제곱근 이하의 어떤 소수로도 나누어 떨어지지 않는다.
+- `prime[i]`의 제곱이 `n`이하인지 판단하여 소수를 찾는다.
+
+```java
+package chapter02;
+
+public class ex09 {
+  public static void main(String[] args) {
+    int counter = 0; // 나눗셈의 횟수
+    int primeNo = 0; // 찾은 소수의 개수
+    int[] prime = new int[500]; // 소수를 저장하는 배열
+
+    prime[primeNo++] = 2; // 2는 소수이다.
+    prime[primeNo++] = 3; // 3은 소수이다.
+
+    for (int n = 5; n <= 1000; n += 2) { // 홀수를 대상으로 검사한다.
+      boolean flag = false;
+      for (int i = 1; prime[i] * prime[i] <= n; i++) 
+        counter += 2;
+        if (n % prime[i] == 0) {
+          flag = true;
+          break; // 나누어떨어지면 소수가 아니다.
+        }
+      }
+
+      if (!flag) { // 끝까지 나누어떨어지지 않았다면 소수이다.
+        prime[primeNo++] = n;
+        counter++;
+      }
+    }
+
+    for (int i = 0; i < primeNo; i++) {
+      System.out.println(prime[i]);
+    }
+
+    System.out.println("나눗셈을 수행한 횟수 : " + counter);
+  }
+}
+```
+
+- 안쪽의 for문을 반복할 때마다 counter를 2씩 증가시키는 것은 다음 두 연산의 수행 횟수를 계산하기 위해서이다.
+
+```java
+prime[i] * prime[i]
+n % prime[i]
+```
+
+- `prime[i]*prime[i] <= n`이 성립하지 않는 경우, 프로그램 흐름이 안쪽 `for`문의 루프 본문으로 들어가지 않으므로 그 곱셈이 수행 횟수에 포함되지 않는다. 그래서 `for`문 종료 후 `if`문에서 그 부분의 횟수를 포함시킨다.
+- `flag`가 `true`가 될 때 `prime[i] * prime[i]`의 횟수는 이미 포함되므로 `flag`가 `false`일 때만 `counter`를 증가시킨다.
+
+## (8) 다차원 배열
+
+- 배열을 구성 요소로 하는 것이 2차원 배열이며, 2차원 배열을 구성 요소로 하는 것이 3차원 배열이다. 이런 배열을 보통의 배열(1차원 배열)과 구별하기 위해 다차원 배열(multi-dimensional array)이라고 한다.
+
+### 2차원 배열
+
+- 다차원 배열 가운데 가장 간단한 것이 2차원 배열이다.
+
+```java
+int[][] x = new int[2][4];
+```
+
+- 2차원 배열은 가로와 세로로 '행'과 '열'이 늘어선 '표'와 같은 모양의 이미지이다. 2차원 배열 안의 각 요소는 `[]`를 이중으로 적용한 식 `x[i][j]`로 접근한다.
+- **Java는 엄밀한 의미에서 다차원 배열이 없다.** 왜냐하면 2차원 배열을 '배열의 배열'로 생각하고 3차원 배열을 '배열의 배열의 배열'로 생각하기 때문이다. 따라서 배열 `x`의 형은 아래와 같다.
+
+```
+"int형을 구성 자료형으로 하는 배열"을 구성 자료형으로 하는 배열
+```
+
+- 2차원 배열을 사용하는 간단한 예
+
+```java
+package chapter02;
+
+public class ex10 {
+  public static void main(String[] args) {
+    int[][] x = new int[2][4]; // 2차원 배열 선언
+
+    x[0][1] = 35;
+    x[0][3] = 50;
+    x[1][2] = 65;
+
+    for (int i = 0; i < 2; i++) {
+      for (int j = 0; j < 4; j++) {
+        System.out.printf("x[%d][%d] : %d\n", i, j, x[i][j]);
+      }
+    }
+  }
+}
+```
+
+```
+x[0][0] : 0
+x[0][1] : 35
+x[0][2] : 0
+x[0][3] : 50
+x[1][0] : 0
+x[1][1] : 0
+x[1][2] : 65
+x[1][3] : 0
+```
+
+### 3차원 배열
+
+- 3차원 배열의 선언 예는 아래와 같다.
+
+```java
+	long y [][][] = new long [2][3][4];
+```
+
+- 3차원 배열의 각 요소는 `y[0][0][0]`, `y[0][0][1]`, ..., `y[1][2][3]`처럼 3개의 인덱스로 나타낼 수 있다.
+- 배열 `y`의 형은 다음과 같다.
+
+```
+"long형을 구성 자료형으로 하는 배열을 구성 자료형으로 하는 배열"을 구성 자료형으로 하는 배열
+```
+
+- 더이상 나눌 수 없는 요소(배열이 아닌)까지 분해하면 배열 `x`는 `int`형 배열, 배열 `y`는 `long`형 배열이다. 이런 형을 **자료형(element type)**이라 부르고 자료형 레벨의 구성 요소를 **요소(element)**라 한다.
+
+## (9) 한 해의 경과 일 수를 계산하는 프로그램
+
+- 2차원 배열을 활용하여 어떤 날짜의 "그 해의 경과 일수"를 구해본다. 예컨데 `4월 18일`을 예로 들어 그 해의 경과 일수를 구하면 다음과 같다.
+
+```
+1월의 일 수 + 2월의 일 수 + 3월의 일 수 + 18
+```
+
+- 일반적으로 나타내면 `m월 d일`의 그 해 경과 일수는 다음과 같다.
+
+```
+1월, 2월, ... m-1월의 일 수의 합 + d
+```
+
+- 2월의 일 수는 **평년은 28일**, **윤년은 29일**로 해에 따라 달라진다. 그래서 아래처럼 **2행 12열의 2차원 배열** `mdays`에 각 달의 일수를 저장할 수 있다.
+
+```
+평년의 각 달의 일 수 ... mdays[0][0], mdays[0][1], ..., mdays[0][11]
+윤년의 각 달의 일 수 ... mdays[1][0], mdays[1][1], ..., mdays[1][11]
+```
+
+```java
+static int[][] mdays = {
+	{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}, // 평년
+	{31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31} // 윤년
+}
+```
+
+### 그 해의 경과 일수를 구하는 프로그램
+
+```java
+package chapter02;
+
+import java.util.Scanner;
+
+public class ex11 {
+
+  // 각 달의 일수
+  static int[][] mdays = {
+      {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}, // 평년
+      {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31} // 윤년
+  };
+
+  // 서기 year년은 윤년인가? (윤년 : 1/ 평년: 0)
+  static int isLeap(int year) {
+    return (year % 4 == 0 && year % 100 !=0 || year % 400 == 0) ? 1 : 0;
+  }
+
+  // 서기 y년 m월 d일의 그 해 경과 일 수를 구함
+  static int dayOfYear(int y, int m, int d) {
+    int days = d;
+
+    for (int i = 1; i < m; i++) {
+      days += mdays[isLeap(y)][i - 1];
+    }
+    return days;
+  }
+
+  public static void main(String[] args) {
+    Scanner stdIn = new Scanner(System.in);
+
+    int retry;
+
+    System.out.println("그 해 경과 일수를 구합니다.");
+
+    do {
+      System.out.print("년 : ");
+      int year = stdIn.nextInt();
+
+      System.out.print("월 : ");
+      int month = stdIn.nextInt();
+
+      System.out.print("일 : ");
+      int day = stdIn.nextInt();
+
+      System.out.printf("그 해 %d일째입니다.\n", dayOfYear(year, month, day));
+
+      System.out.print("한 번 더 할까요? (1. 예/0. 아니요) : ");
+      retry = stdIn.nextInt();
+    } while (retry == 1);
+  }
+}
+```
+
+- 메서드 `isLeap`는 매개변수(`year`)로 전달받은 연도가 윤년이면 `1`을 반환하고, 평년이면 `0`을 반환한다.
+- 메서드 `dayOfYear`는 다음과 같은 순서로 그 해의 경과 일수를 구한다.
+    - `days`에 `d`의 값을 그대로 대입한다.
+    - `i`를 `1`부터 `m-1`까지 증가하면서 `days`에 `y`년 `i`월의 일 수를 더한다. 즉, `1`월부터 `m-1`월까지 일 수를 더한다.
+
+### 연습 문제
+
+- Q8) 메서드 `dayOfYear`를 변수 `i`와 `days` 없이 구현하세요. `while`문을 사용하세요.
+
+```java
+static int dayOfYear(int y, int m, int d) {
+  while (--m > 0 ) {
+    d += mdays[isLeap(y)][m - 1];
+  }
+  return d;
+}
+```
+
+- Q9) `y`년 `m`월 `d`일의 그 해 남은 일 수(12월 31일이면 0, 12월 30일이면 1)를 구하는 아래 메서드를 작성하세요.
+
+```java
+// 나의 풀이
+static int leftDayOfyear(int y, int m, int d) {
+  int leftDays = mdays[isLeap(y)][m - 1] - d;
+  while (++m <= 12 ) {
+    leftDays += mdays[isLeap(y)][m- 1];
+  }
+  return leftDays;
+}
+```
+
+```java
+// 해설
+static int leftDayOfYear(int y, int m, int d) {
+	int days = d; // 일수
+
+	for (int i = 1; i < m; i++) // 1월~(m-1)월의 일 수를 더함
+		days += mdays[isLeap(y)][i - 1];
+	return 365 + isLeap(y) - days;
+}
+```
+
+## (10) 다차원 배열의 내부
+
+- 2행 4열의 배열 선언은 다음과 같다.
+
+```java
+int[][] x = new int [2][4];
+```
+
+- 위에서는 2차원 배열 `x`의 배열 변수 선언과 본체의 생성을 동시에 수행하고 있다. 배열 변수 선언과 본체 생성을 개별적으로 수행하면 다음과 같이 4단계의 선언과 처리로 나누어진다.
+- 2차원 배열 `x`의 선언, `int[][]`형의 `x`는 배열 본체가 아니라 배열 변수이다.
+
+```java
+int[][] x;
+```
+
+- 배열 본체를 생성하고, `x`가 그 것을 참조하도록 대입한다.  생성한 배열은 `x`에 의해 참조되므로, 각 요소에 접근하는 식은 `x[0]`, `x[1]`이다. 구성 요솟수는 `x.length`로 얻을 수 있다.
+
+```java
+// 구성 자료형이 int[]형이고 구성 요솟수가 2인 배열
+x = new int[2][];
+```
+
+- 배열 본체를 생성하고, `x[0]`이 그 것을 참조하도록 대입한다. 생성한 배열은 `x[0]`에 의해 참조되므로 각 요소에 접근하는 식은 `x[0]x[0]`, `x[0][1]`, `x[0][2]`, `x[0][3]`이다. 이 배열의 구성 요솟수는 `x[0].length`로 얻을 수 있다.
+
+```java
+// 구성 자료형이 int형이고 구성 요솟수가 4인 배열
+x[0] = new int[4];
+```
+
+- 배열 본체를 생성하고, `x[1]`이 그 것을 참조하도록 대입한다. 생성한 배열은 `x[1]`에 의해 참조되므로 각 요소에 접근하는 식은 `x[1]x[0]`, `x[1][1]`, `x[1][2]`, `x[1][3]`이다. 이 배열의 구성 요솟수는 `x[1].length`로 얻을 수 있다.
+
+```java
+// 구성 자료형이 int형이고 구성 요솟수가 4인 배열
+x[1] = new int[4];
+```
+
+- 행이 다른 요소가 연속으로 놓이지 않는다. 예컨데, 메모리의 `x[0][3]` 바로 뒤에 `x[1][0]`이 저장되지 않는다.
+
+### java.lang 패키지의 자동 import
+
+- Java 언어와 밀접하게 연관된 클래스나 인터페이스 등을 모아놓은 java.lang 패키지는 형 import를 선언할 필요가 없다.
+- 이 패키지에 속하는 Integer나 String 등의 클래스는 형 import를 선언하지 않고 간단한 이름만으로 나타낼 수 있다.
+
+### 배열에 관한 보충
+
+- 배열 요솟수는 0이어도 된다. 이런 배열을 빈 배열(empty array)이라고 부른다.
+- 배열의 접근은 모두 런타임(실행 시)에 검사된다. 만약 0 미만 또는 배열 요솟수 이상으 인덱스를 사용하면 IndexOutOfBoundsException가 발생한다.
+- 배열 초기화는 마지막 요소에 대한 초기화 뒤에 “추가로” 쉼표(`,`)를 넣을 수 있다.
+
+```java
+int[] a = {1, 2, 3, 4,};
+```
+
+- 다차원 배열의 복제(clone)는 최상위의 1레벨만 수행한다.
+
+```java
+// a[0]과 a[1]만 복제되고 그 아래 레벨의 배열은 복제되지 않고 공유된다.
+int[][] a = {{1, 2, 3, 4}, {5, 6, 7}};
+int[][] b = a.clone();
+```
+
+- 확장된 for문은 배열의 스캔을 매우 간단하게 구현할 수 있다.
+
+```java
+for (double i : 배열 이름) {}
+```
+
+- 콜론(`:`)은 “~의 안에 있는”이라는 뜻이다. 읽을 때는 `in`이라고 읽기도 한다.
+- 그래서 확장 for문을 "for-in문" 또는 "for-each문"이라고도 부른다.
+- 여기서 변수 `i`는 인덱스를 나타내는 것이 아니라 double 형 실수의 값인 **스캔할 때 주목하고 있는 요소**를 나타낸다.
+- 배열의 길이를 조사하는 수고를 덜 수 있다.
+- iterator와 같은 방법으로 스캔할 수 있다.
+- 배열의 모든 요소를 스캔하는 과정에서 인덱스 자체의 값이 필요하지 않으면 그 스캔은 확장 `for`문에 의해 구현하는 것이 좋다.
+
+# 02-2 클래스
+
+## (1) 클래스란?
+
+> 클래스는 임의의 데이터형을 자유로이 조합하여 만들 수 있는 자료구조이다.
+
+### 클래스 선언
+
+- 여러 형의 요소를 조합하여 만든 자료구조가 클래스(class)이다. 요소의 형이 모두 같을 수도 있다.
+
+```java
+class XYZ {
+	int x;
+	long y;
+	double z;	
+}
+```
+
+- XYZ는 클래스 이름이다.
+- 클래스 XYZ는 3개의 데이터 요소를 가지고 있다. 데이터 요소를 필드(field)라고 한다.
+- int형 필드 x, long형 필드 y, double형 필드 z가 세트를 이룬 것이 클래스 XYZ이다.
+- 클래스형 변수를 사용할 때는 먼저 클래스형 변수를 만들고, 그 실체인 클래스 인스턴스를 생성해야 한다.
+
+```java
+XYZ a; // XYZ형의 클래스형 변수 a 선언
+a = new XYZ(); // XYZ형의 클래스 인스턴스(실체)를 생성
+```
+
+- 변수와 인스턴스 생성을 한꺼번에 선언할 수도 있다.
+
+```java
+XYZ a = new XYZ();
+```
+
+## (2) 클래스의 배열
+
+- 신체검사 데이터를 클래스의 배열로 구현한 프로그램을 작성한다. 클래스 PhyscData는 이름(String), 키(int), 시력(double)을 한군데로 모은 것이다. 이 프로그램은 신체검사 데이터의 일람표를 나타내고 평균 키와 시력 분포를 보여준다.
+
+```java
+package chapter02;
+
+import java.util.Scanner;
+
+public class ex12 {
+
+  static final int VMAX = 21;
+
+	// 신체검사 데이터
+  static class PhyscData {
+    String name;
+    int height;
+    double vision;
+
+    public PhyscData(String name, int height, double vision) {
+      this.name = name;
+      this.height = height;
+      this.vision = vision;
+    }
+  }
+
+  // 평균 키 구하기
+  static double aveHeight(PhyscData[] data) {
+    double sum = 0;
+
+    for (int i = 0; i < data.length; i++) {
+      sum += data[i].height;
+    }
+
+    return sum / data.length;
+  }
+
+  // 시력 분포 구하기
+  static void distVision(PhyscData[] data, int[] dist) {
+    int i = 0;
+
+    dist[i] = 0;
+    for (i = 0; i < data.length; i++) {
+      if (data[i].vision >= 0.0 && data[i].vision <= VMAX / 10.0) {
+        dist[(int) (data[i].vision * 10)]++;
+      }
+    }
+  }
+
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+
+    PhyscData[] x = {
+        new PhyscData("박현규", 162, 0.3),
+        new PhyscData("함진아", 173, 0.7),
+        new PhyscData("최윤미", 175, 2.0),
+        new PhyscData("홍연의", 171, 1.5),
+        new PhyscData("이수진", 168, 0.4),
+        new PhyscData("김용준", 174, 1.2),
+        new PhyscData("박용규", 169, 0.8),
+    };
+    int[] vdist = new int[VMAX]; // 시력 분포
+
+    System.out.println("신체검사 리스트");
+    System.out.println(" 이름       키  시력");
+    System.out.println("--------------------");
+    for (int i = 0; i < x.length; i++) {
+			System.out.printf("%-8s%3d%5.1f\n", x[i].name, x[i].height, x[i].vision);
+		}
+    System.out.printf("\n평균키: %5.1fcm\n", aveHeight(x));
+
+    distVision(x, vdist); // 시력 분포를 구함
+
+    System.out.println("\n시력분포");
+    for (int i = 0; i < VMAX; i++) {
+      System.out.printf("%3.1f ~ : %2d명\n", i / 10.0, vdist[i]);
+		}
+  }
+}
+```
+
+### 연습 문제
+
+- Q10) 시력 분포를 그래프로 출력하도록 바꾸어 프로그램을 작성하세요. 기호 문자 `*`를 사람 수만큼 반복하여 나타내세요.
+
+```java
+package chapter02;
+
+import java.util.Scanner;
+
+public class quiz10 {
+
+  static final int VMAX = 21;
+
+  static class PhyscData {
+    String name;
+    int height;
+    double vision;
+
+    public PhyscData(String name, int height, double vision) {
+      this.name = name;
+      this.height = height;
+      this.vision = vision;
+    }
+  }
+
+  // 평균 키 구하기
+  static double aveHeight(PhyscData[] data) {
+    double sum = 0;
+
+    for (int i = 0; i < data.length; i++) {
+      sum += data[i].height;
+    }
+
+    return sum / data.length;
+  }
+
+  // 시력 분포 구하기
+  static void distVision(PhyscData[] data, int[] dist) {
+    int i = 0;
+
+    dist[i] = 0;
+    for (i = 0; i < data.length; i++) {
+      if (data[i].vision >= 0.0 && data[i].vision <= VMAX / 10.0) {
+        dist[(int) (data[i].vision * 10)]++;
+      }
+    }
+  }
+
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+
+    PhyscData[] x = {
+        new PhyscData("박현규", 162, 0.3),
+        new PhyscData("함진아", 173, 0.7),
+        new PhyscData("최윤미", 175, 2.0),
+        new PhyscData("홍연의", 171, 1.5),
+        new PhyscData("이수진", 168, 0.4),
+        new PhyscData("김용준", 174, 1.2),
+        new PhyscData("박용규", 169, 0.8),
+    };
+    int[] vdist = new int[VMAX]; // 시력 분포
+
+    System.out.println("신체검사 리스트");
+    System.out.println(" 이름       키  시력");
+    System.out.println("--------------------");
+    for (int i = 0; i < x.length; i++) {
+      System.out.printf("%-8s%3d%5.1f\n", x[i].name, x[i].height, x[i].vision);
+    }
+    System.out.printf("\n평균키: %5.1fcm\n", aveHeight(x));
+
+    distVision(x, vdist); // 시력 분포를 구함
+
+    System.out.println("\n시력분포");
+    for (int i = 0; i < VMAX; i++) {
+      System.out.printf("%3.1f ~ : ", i / 10.0);
+      printStars(vdist[i]);
+      System.out.println();
+    }
+  }
+
+  static void printStars(int no) {
+    for (int i = 0 ; i < no; i++) {
+      System.out.print("*");
+    }
+  }
+}
+```
+
+- Q11) 서기 년월일을 필드로 갖는 클래스를 만드세요. 다음과 같이 생성자와 메서드를 정의해야 합니다.
+    - 생성자(주어진 날짜로 설정) : YMD(int y, int m, int d)
+    - n일 뒤의 날짜를 반환 : YMD after(int n)
+    - n일 앞의 날짜를 반환 : YMD before(int n)
+
+```java
+package chapter02;
+
+public class quiz11 {
+  public static void main(String[] args) {
+    YMD date = new YMD(2021, 4, 18);
+
+    YMD d1 = date.after(100);
+    System.out.printf("100일 뒤의 날짜는 %d년 %d월 %d일입니다.\n", d1.y, d1.m, d1.d);
+
+    YMD d2 = date.before(100);
+    System.out.printf("100일 앞의 날짜는 %d년 %d월 %d일입니다.\n", d2.y, d2.m, d2.d);
+  }
+}
+
+// 날짜 클래스
+class YMD {
+  int y; // 서기 년
+  int m; // 월(1~12)
+  int d; // 일(1~31)
+
+  // 각 달의 일수
+  static int[][] mdays = {
+      {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}, // 평년
+      {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}, // 윤년
+  };
+
+  // 서기 year년은 윤년인가? (윤년：1／평년：0)
+  static int isLeap(int year) {
+    return (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) ? 1 : 0;
+  }
+
+  // 생성자(주어진 날짜로 설정)
+  YMD(int y, int m, int d) {
+    this.y = y;
+    this.m = m;
+    this.d = d;
+  }
+
+  // n일 뒤의 날짜를 반환
+  YMD after(int n) {
+    YMD temp = new YMD(this.y, this.m, this.d);
+    if (n < 0) {
+      return (before(-n));
+    }
+
+    temp.d += n;
+
+    while (temp.d > mdays[isLeap(temp.y)][temp.m - 1]) {
+      temp.d -= mdays[isLeap(temp.y)][temp.m - 1];
+      if (++temp.m > 12) {
+        temp.y++;
+        temp.m = 1;
+      }
+    }
+    return temp;
+  }
+
+  // n일 앞의 날짜를 반환
+  YMD before(int n) {
+    YMD temp = new YMD(this.y, this.m, this.d);
+    if (n < 0) {
+      return (after(-n));
+    }
+
+    temp.d -= n;
+
+    while (temp.d < 1) {
+      if (--temp.m < 1) {
+        temp.y--;
+        temp.m = 12;
+      }
+      temp.d += mdays[isLeap(temp.y)][temp.m - 1];
+    }
+    return temp;
+  }
+}
+```
+
+### 클래스에 대한 보충
+
+- 클래스 본체와 멤버
+    - 클래스 본체에서는 다음과 같은 내용을 선언할 수 있다.
+    - 멤버(필드/메서드/중첩(nested) 클래스/중첩(nested) 인터페이스)
+    - 클래스 초기화/인스턴스 초기화
+    - 생성자
+- 필드/메서드/생성자를 선언할 때 `public`/`protected`/`private`을 지정할 수 있다.
+- 메서드/생성자는 다중으로 정의(오버로드)할 수 있다.
+- `final`로 선언한 필드는 한 번만 값을 대입할 수 있다.
+- 생성자는 새로 생성한 인스턴스의 초기화를 위해 사용된다.
+- **공개 클래스**는 클래스 접근 제한자 `public`을 붙여 선언한 클래스로, 다른 패키지에서 사용할 수 있다.
+- **final 클래스**는 클래스 접근 제한자 `final`을 붙여 선언한 클래스로, 서브 클래스를 가질 수 없다(새로운 클래스를 상속할 수 없다).
+- **파생 클래스**는 클래스 A를 직접 상위 클래스(direct superclass)로 하려면 선언할 때 extends A를 추가해야 한다. 이때 선언한 클래스는 클래스 A의 직접 서브 클래스(direct subclass)가 된다.
+- 클래스 선언에 `extends`가 없는 클래스의 상위 클래스는 `Object` 클래스가 된다.
+- 인터페이스 `X`를 구현하려면 선언에 `implements X`를 추가해야 한다.
+- 클래스 접근 제한자 `abstract`를 붙여 선언하면 추상 메서드를 가질 수 있는 **추상 클래스(abstract class)**가 된다. 추상 클래스형은 불완전한 클래스이므로 인스턴스를 만들 수 없다.
+- 클래스 또는 인터페이스 안에 선언한 클래스는 **중첩 클래스(nested class)**가 된다.
+    - **멤버 클래스(member class)**는 그 선언이 다른 클래스 또는 인터페이스 선언에 둘러싸인 클래스이다.
+    - **내부 클래스(inner class)**는 명시적으로도 암묵적으로도 정적(static)으로 선언되지 않는 중첩 클래스이다. 정적 초기화나 멤버 인터페이스 선언을 할 수 없다. 그리고 컴파일을 할 때 상수 필드가 아닌 한 정적 멤버를 선언할 수 없다.
+    - **지역 클래스(local class)**는 이름이 주어진 중첩 클래스인 내부 클래스이다. 어떤 클래스의 멤버도 될 수 없다.
