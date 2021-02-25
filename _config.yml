@@ -8,7 +8,7 @@ title                    : "Jiyoun You" # Meta 태그에 들어가는 영역 , m
 title_separator          : "&#124;" # 타이틀 사이 구분자 <title>Welcome to Jekyll | Minimal Mistakes</title> 해당 형식으로 들어갑니다.
 subtitle                 : "Since Jul 2020" # 타이틀 아래에 나올 작은 글씨 
 name                     : "Jiyoun" # 맨 하단 이름 찍히는 영역
-description              : "꾸준히 공부하는 웹 개발자입니다. # Meta 태그에 들어가는 영역 
+description              : "웹 개발자가 되기 위해 공부하고 있습니다." # Meta 태그에 들어가는 영역 
 url                      : "https://github.com/jiyounyou/" # GitBlog 호스트 주소
 baseurl                  : # subPath https://jiyounyou.github.io/blog라고 하고 싶을 시 "/blog" 라고 적는다.
 repository               : "jiyounyou/jiyounyou.github.io" # GitHub username/repo-name  
@@ -102,7 +102,7 @@ analytics:
 author:
   name             : "유지연"
   avatar           : "/assets/images/profile/profilephoto.jpg" # 프로필 이미지
-  bio              : "꾸준히 공부하는 웹개발자입니다. <br> 공부하면서 기록한 내용들을 포스팅합니다."
+  bio              : "웹 개발자가 되기 위해 공부하고 있습니다. <br> 공부하면서 기록한 내용들을 포스팅합니다."
   location         : "Seoul, Korea"
   #email            : "younny418@gmail.com"
   links:
