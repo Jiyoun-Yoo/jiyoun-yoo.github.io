@@ -33,7 +33,7 @@ last_modified_at: '2021-04-05 22:00:00 +0800'
 
 - 함수를 사용하여 코드를 저장한 것을 함수 정의문이라 한다. 함수를 선언할 때는 `function` 키워드를 사용해 변수를 선언한다.
 
-```jsx
+```javascript
 function 함수명() {
 	자바스크립트 코드;
 }
@@ -41,7 +41,7 @@ function 함수명() {
 
 - 익명 함수를 선언하고 변수에 참조할 수도 있다.
 
-```jsx
+```javascript
 참조 변수 = function() {
 	자바스크립트 코드;
 }
@@ -49,7 +49,7 @@ function 함수명() {
 
 - 함수 정의 문 안에 작성된 코드는 즉시 실행되지 않는다. 함수는 메모리에 할당되어 대기하고 있다가 함수가 호출되면 실행된다.
 
-```jsx
+```javascript
 함수명();
 참조 변수();
 ```
@@ -104,7 +104,7 @@ function 함수명() {
 
 - `getElementById()` 메서드는 `id` 값을 이용해 문서 객체(태그)를 선택하는 메서드이다. CSS의 아이디 선택자와 비슷한 역할을 한다. 선택한 문서 객체에 스타일을 적용하기 위해서는 문서 객체의 `sytle`에 접근하고 적용하고자 하는 속성에 새 값을 입력해야 한다.
 
-```jsx
+```javascript
 문서객체.style.스타일 속성=새 값;
 ```
 
@@ -117,7 +117,7 @@ function 함수명() {
 
 - 기본 함수 정의문은 함수를 호출할 때 값을 전달할 수 없었다. 하지만 매개변수가 있는 함수 정의문은 함수를 호출할 때 전달하고자 하는 값을 입력하여 호출할 수 있다. 이렇게 전달된 값은 매개변수가 받아 함수 정의문에서 사용할 수 있다.
 
-```jsx
+```javascript
 function 함수명(매개변수1, 매개변수2, ..., 매개변수n) {
 	자바스크립트 코드;
 }
@@ -169,7 +169,7 @@ function 함수명(매개변수1, 매개변수2, ..., 매개변수n) {
 
 - 함수 정의문에서 `arguments`를 사용하면 매개변수를 사용하는 것처럼 함수 호출문의 값을 받아올 수 있다. 함수 정의문의 매개변수가 없는 상태에서 데이터를 전달하여 함수를 호출하면 그 값은 배열에 저장된다. 함수 정의문에서는 그 값을 `arguments`라는 변수로 참조한다.
 
-```jsx
+```javascript
 function 함수명() {
 	arguments;
 }
@@ -180,7 +180,7 @@ function 함수명() {
 
 - 매개변수를 생략한 함수 호출문에서 3개의 숫자형 데이터를 전달하려고 한다. 숫자형 데이터는 배열에 저장되고 `arguments` 변수로 참조할 수 있다. `arguments`의 인덱스를 이용해 배열에 저장된 값을 불러올 수도 있다.
 
-```jsx
+```javascript
 function sum() {
 	var sum = arguments[0] + arguments[1] + arguments[2];
 	document.write(sum);
@@ -191,7 +191,7 @@ sum(10, 20, 30); // 60 출력
 
 - 매개변수 없이 함수 호출문에 전달된 값들은 배열로 저장된다. 따라서 `for`문을 이용하여 배열에 들어 있는 값들을 꺼낼 수 있다.
 
-```jsx
+```javascript
 function sum() {
 	var sum = 0;
 	for(var i = 0; i < arguments.length; i++) {
@@ -212,7 +212,7 @@ sum(10, 20, 30); // 60 출력
 
 - 함수 정의문에서 return문은 코드를 종료하고 결괏값을 반환한다. 따라서 return문 다음에 다른 코드가 오더라도 그 코드는 무시하고 데이터를 반환한다.
 
-```jsx
+```javascript
 function 함수명() {
 
 	자바스크립트 코드;
@@ -226,7 +226,7 @@ function 함수명() {
 
 - 함수 호출과 함께 인자값을 전달하고, 그 인자를 이용한 계산값을 반환하는 함수를 선언한다.
 
-```jsx
+```javascript
 function sum(num1, num2) {
 	return num1 + num2;
 }
@@ -298,7 +298,7 @@ document.write(result); // 30 출력
 
 - 함수 정의문 내에서 작성한 코드로 함수를 다시 호출하는 것을 재귀 함수 호출이라 한다. 재귀 함수 호출은 함수를 반복문처럼 여러 번 호출하기 위해 사용한다.
 
-```jsx
+```javascript
 function myFunc() {
 	자바스크립트 코드;
 	myFunction();
@@ -337,7 +337,7 @@ myFunction();
 
 - 전역 변수(Global Variables)는 자바스크립트 어디에서든 사용할 수 있는 변수이고, 지역 변수(Local Variables)는 함수 스코프에서만 사용할 수 있는 변수이다.
 
-```jsx
+```javascript
 var 변수명; // 전역 변수
 
 function 함수명() {
@@ -347,7 +347,7 @@ function 함수명() {
 
 - 함수 스코프에서 선언한 변수는 지역 변수이며 함수 안에서만 사용할 수 있다. 아래의 경우, 함수 스코프에서 `score` 값을 50으로 변경해도 함수 스코프 밖의 `socre` 값은 10을 출력한다.
 
-```jsx
+```javascript
 var score = 10;
 
 function myFunction() {
@@ -365,7 +365,7 @@ alert(score); // 10 : 함수 스코프 밖에서는 전역 변수 데이터를 �
 
 - 전역 함수는 자바스크립트 어디에서든 사용할 수 있는 함수이고, 지역 함수는 함수 스코프에서만 사용할 수 있는 함수이다.
 
-```jsx
+```javascript
 function globalFunc1() { // 전역 함수
 	자바스크립트 코드;
 }
@@ -379,7 +379,7 @@ function globalFunc2() {
 
 - 함수 스코프에서 선언된 함수는 지역 함수가 되어 함수 스코프에서만 호출할 수 있다.
 
-```jsx
+```javascript
 function myFunc() {
 	alert("전역 함수");
 }
@@ -403,13 +403,13 @@ outerFunc(); // "지역 함수" 출력
 
 - 지역 함수 선언에 사용하면 효과적인 즉시 실행 함수가 있다. 함수를 선언하는 동시에 함수를 호출하는 것이다.
 
-```jsx
+```javascript
 (function() {
 	자바스크립트 코드;
 }());
 ```
 
-```jsx
+```javascript
 (function() {
 	var 변수명; // 지역 변수
 
@@ -421,7 +421,7 @@ outerFunc(); // "지역 함수" 출력
 
 - 아래와 같은 경우는 두 개발자가 동일한 변수명과 함수명을 사용하지만, 즉시 실행 함수에 지역 변수와 지역 함수를 선언하여 충돌을 피한 예이다.
 
-```jsx
+```javascript
 // A 개발자
 (function() {
 	var num = 100;
@@ -448,7 +448,7 @@ outerFunc(); // "지역 함수" 출력
 - 내장 객체를 생성할 때는 이미 자바스크립트 엔진에 내장되어 있는 객체 생성자 함수(Object Constructor Function)를 사용하여 객체를 생성한다.
 - 객체 생성자 함수를 선언하고 객체를 생성할 때, `new` 키워드를 사용해 객체를 생성하고 객체 생성자 함수에서 this 키워드를 사용해 생성한 객체에 속성과 함수를 등록한다.
 
-```jsx
+```javascript
 // 객체 생성자 함수
 function 함수명(매개변수1, 매개변수2, ..., 매개변수n) {
 	this.속성명 = 새 값;
@@ -512,7 +512,7 @@ var 참조변수 = { 속성: 새 값, 함수명 : function() { ... } };
 - 객체 생성자 함수를 사용하여 객체를 생성하면 객체를 생성한 만큼 함수가 등록된다. 그리고 함수를 여러 개 등록하면 메모리 공간을 많이 차지하여 메모리를 낭비하게 된다. 이럴 경우에는 객체 생성자 함수에 **프로토타입(Prototype)**을 사용하여 함수를 등록하면 메모리 낭비를 줄일 수 있다.
 - 프로토타입(Prototype)의 사전적 의미는 '원형'이다. 자바스크립트에서 '원형'은 객체 생성자 함수를 의미한다. 프로토타입을 사용하여 등록한 함수는 원형(객체 생성자 함수)에서 생성된 객체를 공유할 수 있다. 즉, 여러 개의 함수를 등록할 필요가 없다.
 
-```jsx
+```javascript
 function 함수명(매개변수1, 매개변수2, ... ,매개변수n) {
 	this.속성명 = 새 값;
 }
@@ -579,7 +579,7 @@ var 참조변수(인스턴스 네임) = new 함수명();
 - `encodeURI()` : 문자를 유니 코드값으로 인코딩(영문, 숫자, 일부기호(`;` `,` `/` `?` `:` `@` `&` `=` `+` `$`)는 제외)
 - `encodeURIComponent()` : 문자를 유니 코드값으로 인코딩(영문, 숫자 제외)
 
-```jsx
+```javascript
 encodeURI("?query=값"); // "?query=%EA%B0%91"
 encodeURIComponent("?query=값"); // "3Fquery%3D%EA%B0%91"
 ```
@@ -587,7 +587,7 @@ encodeURIComponent("?query=값"); // "3Fquery%3D%EA%B0%91"
 - `decodeURI()` : 유니 코드값을 디코딩해서 다시 문자화
 - `decodeURICompoenet()` : 유니 코드값을 디코딩해서 다시 문자화
 
-```jsx
+```javascript
 decodeURI("?query=%EA%B0%91"); // "?query=값"
 decodeURICompoenet("3Fquery%3D%EA%B0%91"); // "?query=값"
 ```
@@ -595,7 +595,7 @@ decodeURICompoenet("3Fquery%3D%EA%B0%91"); // "?query=값"
 - `parseInt()` : 문자열 데이터를 정수형 데이터로 반환
 - `parseFloat()` : 문자열 데이터를 실수형 데이터로 반환
 
-```jsx
+```javascript
 parseInt("5.12"); // 5
 parseInt("15px"); // 15
 parseFloat("5.12"); // 5.12
@@ -606,7 +606,7 @@ parseFloat("65.5%"); // 65.5
 - `Number()` : 숫자형 데이터로 반환
 - `Boolean()` : 논리형 데이터로 반환
 
-```jsx
+```javascript
 String(5); // "5"
 Number("5"); // 5
 Boolean(5); // true
@@ -616,7 +616,7 @@ Boolean(null); // false
 - `isNaN()` : `is Not a Number`의 약자이며 숫자가 아닌 문자가 포함되어 있으면 `true`를 반환
 - `eval()` : 문자형 데이터를 따옴표가 없는 자바스크립트 코드로 처리
 
-```jsx
+```javascript
 isNan("5-3"); // true
 isNan("53"); // false
 eval("15 + 5"); // 20
