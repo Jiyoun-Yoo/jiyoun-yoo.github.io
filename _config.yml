@@ -4,14 +4,14 @@ minimal_mistakes_skin    : "air" # 태마 색 설정 "air", "aqua", "contrast", 
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : "Jiyoun You" # Meta 태그에 들어가는 영역 , masthead_title등이 없으면 기본값으로 나온다.
+title                    : "jiyoun yoo" # Meta 태그에 들어가는 영역 , masthead_title등이 없으면 기본값으로 나온다.
 title_separator          : "&#124;" # 타이틀 사이 구분자 <title>Welcome to Jekyll | Minimal Mistakes</title> 해당 형식으로 들어갑니다.
 subtitle                 : "Since Jul 2020" # 타이틀 아래에 나올 작은 글씨 
 name                     : "Jiyoun" # 맨 하단 이름 찍히는 영역
 description              : "Keep Coding!" # Meta 태그에 들어가는 영역 
-url                      : "https://jiyounyou.github.io/" # GitBlog 호스트 주소
-baseurl                  : # subPath https://jiyounyou.github.io/blog라고 하고 싶을 시 "/blog" 라고 적는다.
-repository               : "jiyounyou/jiyounyou.github.io" # GitHub username/repo-name  
+url                      : "https://jiyoun-yoo.github.io/" # GitBlog 호스트 주소
+baseurl                  : # subPath https://jiyoun-yoo.github.io/blog라고 하고 싶을 시 "/blog" 라고 적는다.
+repository               : "jiyoun-yoo/jiyoun-yoo.github.io" # GitHub username/repo-name
 teaser                   : # "/assets/images/senior-couple-4723737_640.jpg" # 홈페이지 기본 티져 이미지
 logo                     : # 타이틀 옆에 작게 들어갈 이미지.
 masthead_title           : "Keep Coding!" # 홈페이지 최 상탄에 들어갈 타이틀
@@ -22,7 +22,7 @@ words_per_minute         : 200 # 해당 포스트 읽는데 걸리는 시간을 
 comments:
   provider               : #"disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
-    shortname            : jiyounyou # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : jiyoun-yoo # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -111,10 +111,10 @@ author:
       url: mailto:younny418@gmail.com
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/jiyounyou"
+      url: "https://github.com/jiyoun-yoo"
     - label: "Blog"
       icon: "fas fa-fw fa-link"
-      #url: "https://jiyounyou.github.io/"
+      #url: "https://jiyoun-yoo.github.io/"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
@@ -133,7 +133,7 @@ footer:
       url: mailto:younny418@gmail.com
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/jiyounyou"
+      url: "https://github.com/jiyoun-yoo"
 
 # Reading Files
 include:

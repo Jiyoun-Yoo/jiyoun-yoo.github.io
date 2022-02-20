@@ -27,26 +27,26 @@ last_modified_at: '2020-10-07 22:00:00 +0800'
 - 컴퓨터에서 컴퓨터로 데이터를 전송할 때 컴퓨터 내부에서는 여러가지 일을 하는데, 이런 일을 일곱 개 계층으로 나누어서 한다.
 - 이 때 그 일곱 개 **계층**이 아래의 그림과 같은 OSI 모델이다. 계층 대신 **레이어**라는 용어를 사용하기도 한다.
 
-![OSI 모델]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-for-everyone/OSI-model1.png){: .align-center}{: width="60%" height="60%"}
+![OSI 모델]({{ https://jiyoun-yoo.github.io/ }}{{ site.baseurl }}/assets/images/post/network-for-everyone/OSI-model1.png){: .align-center}{: width="60%" height="60%"}
 - 통신할 때 데이터는 맨 위의 응용 계층에서 순차적으로 아래 계층으로 전달된다.
 
 ### 7계층에 대한 설명
-![OSI 모델]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-for-everyone/OSI-model2.png){: .align-center}{: width="100%" height="100%"}
+![OSI 모델]({{ https://jiyoun-yoo.github.io/ }}{{ site.baseurl }}/assets/images/post/network-for-everyone/OSI-model2.png){: .align-center}{: width="100%" height="100%"}
 
 - 데이터를 전송하는 쪽(**송신 측**)은 데이터를 보내기 위해서 상위 층에서 하위 층으로 데이터를 전달한다.
 - **각 계층은 독립적**이므로 데이터가 전달되는 동안에 다른 계층의 영향을 받지 않는다.
 - 데이터를 받는 쪽(**수신 측**)은 하위 계층에서 상위 계층으로 각 계층을 통해 전달된 데이터를 받게 된다.
-![OSI 모델에서 데이터 송수신]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-for-everyone/OSI-model3.png){: .align-center}{: width="80%" height="80%"}
+![OSI 모델에서 데이터 송수신]({{ https://jiyoun-yoo.github.io/ }}{{ site.baseurl }}/assets/images/post/network-for-everyone/OSI-model3.png){: .align-center}{: width="80%" height="80%"}
 
 ## 2. TCP/IP 모델이란?
 ### TCP/IP 모델의 4계층
 - TCP/IP 모델은 4계층으로 이루어져 있다.
 - 각 계층에는 다양한 프로토콜이 있다.
-![TCP/IP 모델]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-for-everyone/TCP-IP-model1.png){: .align-center}{: width="70%" height="70%"}
+![TCP/IP 모델]({{ https://jiyoun-yoo.github.io/ }}{{ site.baseurl }}/assets/images/post/network-for-everyone/TCP-IP-model1.png){: .align-center}{: width="70%" height="70%"}
 
 ### OSI 모델과 TCP/IP 모델 비교
 - OSI 모델의 응용 계층, 표현 계층, 세션 계층이 TCP/IP 모델에서는 응용 계층으로 합쳐져 있다.
-![TCP/IP 모델]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-for-everyone/TCP-IP-model2.png){: .align-center}{: width="80%" height="80%"}
+![TCP/IP 모델]({{ https://jiyoun-yoo.github.io/ }}{{ site.baseurl }}/assets/images/post/network-for-everyone/TCP-IP-model2.png){: .align-center}{: width="80%" height="80%"}
 
 ---
 # LESSON 08 캡슐화와 역캡슐화
@@ -55,7 +55,7 @@ last_modified_at: '2020-10-07 22:00:00 +0800'
 - 데이터를 보내려면 데이터의 앞부분에 전송하는 데 필요한 정보를 붙여서 다음 계층으로 보내야 하는데, 이 정보를 **헤더**라고 한다.
 - 헤더에는 **데이터를 전달받을 상대방에 대한 정보**도 포함되어 있다.
 
-![캡슐화]({{ https://jiyounyou.github.io/ }}{{ site.baseurl }}/assets/images/post/network-for-everyone/capsulation.png){: .align-center}{: width="80%" height="80%"}
+![캡슐화]({{ https://jiyoun-yoo.github.io/ }}{{ site.baseurl }}/assets/images/post/network-for-everyone/capsulation.png){: .align-center}{: width="80%" height="80%"}
 - 이처럼 헤더를 붙여나가는 것을 **캡슐화**라 한다.
 
 ### 역캡슐화
