@@ -1,9 +1,9 @@
 ---
-title: "About Jiyoun Yoo"
+title: "Resume"
 permalink: /about/
-layout: about
+layout: single
 author_profile: true
----
+------
 
 ## Jiyoun Yoo
 - ENTJ ✨
@@ -19,7 +19,7 @@ author_profile: true
 
 ### Explore my projects
 - I have all of my projects in my  [![Github Badge](https://img.shields.io/badge/-Github-black?style=flat-square&logo=0E9648&link=https://github.com/jiyoun-yoo/)](https://github.com/jiyoun-yoo)
-- Latest Work : [Devloper Village](https://github.com/procompiler/developer-village)
+- Currently Working on : [market-ggori-dms](https://github.com/Jiyoun-Yoo/market-ggori-dms)
 
 <br>  
 

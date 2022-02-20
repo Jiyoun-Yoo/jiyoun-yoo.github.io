@@ -1,4 +1,4 @@
-# jiyoun yoo
+# Jiyoun Yoo
 - ENTJ ✨
 - Web-developer-to-be 💻
 - 한국어 / English 💬 
