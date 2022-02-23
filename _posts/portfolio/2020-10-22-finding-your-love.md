@@ -6,7 +6,8 @@ last_modified_at: '2020-10-23 22:00:00 +0800'
 ---
 
 # Finding your love
-비트캠프 2차 미니 프로젝트
+- 비트캠프 2차 미니 프로젝트 
+- [GitHub] (https://github.com/Jiyoun-Yoo/finding-your-love)
 
 ## 주제
 - 결혼정보회사 회원 관리 시스템
@@ -22,7 +23,7 @@ last_modified_at: '2020-10-23 22:00:00 +0800'
 
 
 ## 참여자
-- 김태희(https://github.com/TaeheeKim15), 유지연(https://github.com/jiyoun-yoo)
+- [김태희](https://github.com/TaeheeKim15), [유지연](https://github.com/jiyoun-yoo)
 
 
 ## 구현 방식
