@@ -1,7 +1,7 @@
 ---
 title: '[모두의 네트워크] 1장 네트워크 첫걸음'
 categories:
-- network
+- Network
 tag:
 - 모두의 네트워크
 last_modified_at: '2020-10-01 22:00:00 +0800'

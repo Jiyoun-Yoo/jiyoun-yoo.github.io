@@ -3,9 +3,6 @@ title: 'Design Patter4: Command Pattern'
 layout: single
 author_profile: true
 read_time: true
-comments: true
-share: true
-related: true
 categories:
 - Design Pattern
 tag:

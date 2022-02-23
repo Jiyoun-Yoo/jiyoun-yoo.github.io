@@ -1,7 +1,7 @@
 ---
 title: '[모두의 네트워크] 2장 네트워크의 기본 규칙'
 categories:
-- network
+- Network
 tag:
 - 모두의 네트워크
 last_modified_at: '2020-10-07 22:00:00 +0800'

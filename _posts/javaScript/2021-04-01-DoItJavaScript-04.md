@@ -1,7 +1,7 @@
 ---
 title: '[Do it! 자바스크립트 + 제이쿼리 입문] 04 객체'
 categories:
-- javaScript
+- JavaScript
 tag:
 - [javaScript, jQuery]
 last_modified_at: '2021-04-01 22:00:00 +0800'

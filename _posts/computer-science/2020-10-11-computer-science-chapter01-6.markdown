@@ -1,7 +1,7 @@
 ---
 title: '컴퓨터개론 1장 6절: 미래 컴퓨팅 기술'
 categories:
-- Computer-Science
+- Computer Science
 tag:
 - computer-science
 description: 숭실대학교 글로벌미디어학부 정기철 교수님의 컴퓨터 개론 수업을 듣고 정리했습니다.
