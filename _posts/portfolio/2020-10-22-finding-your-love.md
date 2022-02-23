@@ -5,9 +5,12 @@ categories:
 last_modified_at: '2020-10-23 22:00:00 +0800'
 ---
 
+프로젝트 깃허브 : [Finding Your Love] (https://github.com/Jiyoun-Yoo/finding-your-love)
+
+---
+
 # Finding your love
 - 비트캠프 2차 미니 프로젝트 
-- [GitHub] (https://github.com/Jiyoun-Yoo/finding-your-love)
 
 ## 주제
 - 결혼정보회사 회원 관리 시스템
