@@ -16,7 +16,7 @@ toc_label: Contents
 description: 비트캠프 엄진영 강사님의 수업을 듣고 정리했습니다.
 article_tag1: 1. Command 패턴이란?
 article_tag2: 2. Command 패턴 적용 전
-article_tag3ㅋ: 3. Command 패턴 적용
+article_tag3: 3. Command 패턴 적용
 article_section: Design Pattern
 meta_keywords: design-pattern, java
 last_modified_at: '2020-09-12 22:00:00 +0800'
