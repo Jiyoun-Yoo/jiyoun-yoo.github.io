@@ -1,5 +1,5 @@
 ---
-title: '2020-10-23 TIL(at work)'
+title: '[Mini Project] Finding Your Love'
 categories:
 - Project
 last_modified_at: '2020-10-23 22:00:00 +0800'
@@ -22,8 +22,7 @@ last_modified_at: '2020-10-23 22:00:00 +0800'
 
 
 ## 참여자
-- 김태희: https://github.com/TaeheeKim15
-- 유지연: https://github.com/jiyoun-yoo
+- 김태희(https://github.com/TaeheeKim15), 유지연(https://github.com/jiyoun-yoo)
 
 
 ## 구현 방식
