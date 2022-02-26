@@ -1,6 +1,6 @@
 ---
 title: "Portfolio"
-permalink: /projects/
-layout: projects
+permalink: / Portfolio/
+layout: single
 author_profile: true
 ---

@@ -2,7 +2,6 @@
 title: '[Mini Project] Finding Your Love'
 categories:
 - Project
-projects: Mini Project
 last_modified_at: '2020-10-23 22:00:00 +0800'
 ---
 
