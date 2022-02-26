@@ -5,7 +5,7 @@ categories:
 last_modified_at: '2020-10-23 22:00:00 +0800'
 ---
 
-프로젝트 깃허브 : [Finding Your Love] (https://github.com/Jiyoun-Yoo/finding-your-love)
+프로젝트 깃허브 : [Finding Your Love](https://github.com/Jiyoun-Yoo/finding-your-love)
 
 ---
 
